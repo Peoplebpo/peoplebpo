@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<!--Code By Webdevtrick ( https://webdevtrick.com )-->
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Productos Peoplebpo</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+  <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
+  <script src="https://use.fontawesome.com/d9126b89bd.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+  <script src="js/help.js"></script>
+</head>
+<body>
+<div id="principal">
+<header class="header">
+  <h1 class="header__title">¿Que productos desea simular?</h1>
+</header>
+<div class="content">
+    <div class="container overflow-hidden">
+      <div class="multisteps-form">
+        <div class="row">
+          <div class="col-12 col-lg-8 ml-auto mr-auto mb-4">
+            <div class="multisteps-form__progress">
+              <button class="multisteps-form__progress-btn js-active" type="button" title="Información del Cliente">Información</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Selecciona tu Solución">Soluciónes</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Selecciona Capacidades a Adquirir">Capacidades</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Indicanos tu Volumetria estimada">Volumetria</button>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+
+          <div class="col-12 col-lg-12 m-auto">
+            <form class="multisteps-form__form">
+
+              <!-- inicio primer paso -->
+
+              <div class="multisteps-form__panel shadow p-4 rounded bg-white js-active" data-animation="scaleIn">
+                <h3 class="multisteps-form__title">Información del Cliente</h3>
+                <div class="multisteps-form__content">
+                  <div class="form-row mt-4">
+                    <div class="col-12 col-sm-6">
+                      <input class="multisteps-form__input form-control" type="text" placeholder="Nombre Contacto"/>
+                    </div>
+                    <div class="col-12 col-sm-6 mt-4 mt-sm-0">
+                      <input class="multisteps-form__input form-control" type="text" placeholder="Nombre Empresa"/>
+                    </div>
+                  </div>
+                  <div class="form-row mt-4">
+                    <div class="col-12 col-sm-6">
+                      <input class="multisteps-form__input form-control" type="text" placeholder="Rut Empresa"/>
+                    </div>
+                    <div class="col-12 col-sm-6 mt-4 mt-sm-0">
+                      <input class="multisteps-form__input form-control" type="email" placeholder="Email Contacto"/>
+                    </div>
+                  </div>
+                  <div class="form-row mt-4">
+                    <div class="col-12 col-sm-6">
+                      <input class="multisteps-form__input form-control" type="text" placeholder="Teléfono Contacto"/>
+                    </div>
+                    <div class="col-12 col-sm-6 mt-4 mt-sm-0">
+                      <select class="multisteps-form__select form-control">
+                        <option selected="selected">País</option>
+                        <option>Chile</option>
+                        <option>Perú</option>
+                        <option>Colombia</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="button-row d-flex mt-4">
+                    <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Siguiente</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Termino primer paso -->
+
+              <!-- Inicio segundo paso -->
+
+              <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
+                <h3 class="multisteps-form__title">Configura Tu Solución</h3>
+                <div class="multisteps-form__content">
+                  <div class="form-row mt-4">
+                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                        <input class="fmultisteps-form__input" type="checkbox" id="btn_marca" data-toggle="toggle" data-onstyle="success" data-on="+" data-off="-">
+
+                        <label class="form-check-label" for="flexCheckDefault" id="lb_diseno_marca">Diseño de Marca</label><i class="fa fa-question-circle" id="help_diseno_marca"></i>
+                    </div>
+                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                      <input class="multisteps-form__input" type="checkbox" value="" id="ecommerce" data-toggle="toggle" data-onstyle="success" data-on="+" data-off="-">
+                        <label class="form-check-label" for="flexCheckDefault" id="lb_ecommerce">E-commerce</label><i class="fa fa-question-circle" id="help_ecommerce"></i>
+                    </div>
+                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                      <input class="multisteps-form__input" type="checkbox" value="" id="sac" data-toggle="toggle" data-onstyle="success" data-on="+" data-off="-">
+                        <label class="form-check-label" for="flexCheckDefault" id="lb_sac">SAC</label><i class="fa fa-question-circle" id="help_sac"></i>
+                    </div>
+                  </div>
+                  <div class="form-row mt-4">
+                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                        <input class="multisteps-form__input" type="checkbox" value="" id="digital" data-toggle="toggle" data-onstyle="success" data-on="+" data-off="-">
+                        <label class="form-check-label" for="flexCheckDefault" id="lb_marketing">Marketing Digital</label><i class="fa fa-question-circle" id="help_marketing"></i>
+                    </div>
+                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                        <input class="multisteps-form__input" type="checkbox" value="" id="call" data-toggle="toggle" data-onstyle="success" data-on="+" data-off="-">
+                        <label class="form-check-label" for="flexCheckDefault" id="lb_call">Click To Call</label><i class="fa fa-question-circle" id="help_call"></i>
+                    </div>
+                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                        <input class="multisteps-form__input" type="checkbox" value="" id="ejecutivo" data-toggle="toggle" data-onstyle="success" data-on="+" data-off="-">
+                        <label class="form-check-label" for="flexCheckDefault" id="lb_ejecutivos">Ejecutivos</label><i class="fa fa-question-circle" id="help_ejecutivos"></i>
+                    </div>
+                  </div>
+                  <div class="form-row mt-4">
+
+                                        <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+
+                    </div>
+
+                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                        <input class="multisteps-form__input" type="checkbox" value="" id="office" data-toggle="toggle" data-onstyle="success" data-on="+" data-off="-">
+                        <label class="form-check-label" for="flexCheckDefault" id="lb_office">Back Office</label><i class="fa fa-question-circle" id="help_office"></i>
+                    </div>
+                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                        <input class="multisteps-form__input" type="checkbox" value="" id="whatsapp" data-toggle="toggle" data-onstyle="success" data-on="+" data-off="-">
+                        <label class="form-check-label" for="flexCheckDefault" id="lb_whatsapp">Whatsapp</label><i class="fa fa-question-circle" id="help_whatsapp"></i>
+                    </div>
+
+                    
+</div>
+                    <div class="form-row mt-4">
+
+                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+
+                    </div>
+
+                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                        <input class="multisteps-form__input" type="checkbox" value="" id="rrss" data-toggle="toggle" data-onstyle="success" data-on="+" data-off="-">
+                        <label class="form-check-label" for="flexCheckDefault" id="lb_rrss">RRSS</label><i class="fa fa-question-circle" id="help_rrss"></i>
+                    </div> 
+                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                        <input class="multisteps-form__input" type="checkbox" value="" id="consultoria" data-toggle="toggle" data-onstyle="success" data-on="+" data-off="-">
+                        <label class="form-check-label" for="flexCheckDefault" id="lb_consultoria">Consultoria</label><i class="fa fa-question-circle" id="help_consultoria"></i>
+                    </div>
+
+                  </div>
+                  <div class="button-row d-flex mt-4">
+                    <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Anterior</button>
+                    <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Siguiente</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Termino segundo paso -->
+
+              <!-- Inicio tercer paso -->
+
+              <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
+                <h3 class="multisteps-form__title">Adquiere Capacidades</h3>
+                <div class="multisteps-form__content">
+                  <div class="form-row mt-4">
+
+                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                      <input class="multisteps-form__input" type="checkbox" id="g-rrss" data-toggle="toggle" data-onstyle="success" data-on="+" data-off="-">
+                      <label class="form-check-label" for="flexCheckDefault" id="lb_grrss">Gestión de RRSS</label><i class="fa fa-question-circle" id="help_grrss"></i>
+                    </div>
+
+                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                        <input class="multisteps-form__input" type="checkbox" value="" id="ivr" data-toggle="toggle" data-onstyle="success" data-on="+" data-off="-">
+                        <label class="form-check-label" for="flexCheckDefault" id="lb_ivr">IVR</label><i class="fa fa-question-circle" id="help_ivr"></i>
+                    </div> 
+                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                        <input class="multisteps-form__input" type="checkbox" value="" id="bpo" data-toggle="toggle" data-onstyle="success" data-on="+" data-off="-">
+                        <label class="form-check-label" for="flexCheckDefault" id="lb_bpo">BPO</label><i class="fa fa-question-circle" id="help_bpo"></i>
+                    </div>
+
+                  </div>
+
+                  <div class="form-row mt-4">
+
+                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                      
+                    </div>
+
+                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                        <input class="multisteps-form__input" type="checkbox" value="" id="voximplant" data-toggle="toggle" data-onstyle="success" data-on="+" data-off="-">
+                        <label class="form-check-label" for="flexCheckDefault" id="lb_vox">Voximplant</label><i class="fa fa-question-circle" id="help_vox"></i>
+                    </div> 
+                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                        <input class="multisteps-form__input" type="checkbox" value="" id="contact_center" data-toggle="toggle" data-onstyle="success" data-on="+" data-off="-">
+                        <label class="form-check-label" for="flexCheckDefault" id="lb_center">Contact Center</label><i class="fa fa-question-circle" id="help_center"></i>
+                    </div>
+
+                  </div>
+
+                  <div class="form-row mt-4">
+
+                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                      
+                    </div>
+
+                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                        <input class="multisteps-form__input" type="checkbox" value="" id="c-ecommerce" data-toggle="toggle" data-onstyle="success" data-on="+" data-off="-">
+                        <label class="form-check-label" for="flexCheckDefault" id="lb_gecommerce">E-commerce</label><i class="fa fa-question-circle" id="help_gecommerce"></i>
+                    </div> 
+                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                        <input class="multisteps-form__input" type="checkbox" value="" id="customer_experience" data-toggle="toggle" data-onstyle="success" data-on="+" data-off="-">
+                        <label class="form-check-label" for="flexCheckDefault" id="lb_gcustomer">Customer Experience</label><i class="fa fa-question-circle" id="help_gcustomer"></i>
+                    </div>
+
+                  </div>
+
+                  <div class="form-row mt-4">
+
+                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                      
+                    </div>
+
+                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                        <input class="multisteps-form__input" type="checkbox" value="" id="crm" data-toggle="toggle" data-onstyle="success" data-on="+" data-off="-">
+                        <label class="form-check-label" for="flexCheckDefault" id="lb_gcrm">CRM</label><i class="fa fa-question-circle" id="help_gcrm"></i>
+                    </div> 
+                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                        <input class="multisteps-form__input" type="checkbox" value="" id="c-consultoria" data-toggle="toggle" data-onstyle="success" data-on="+" data-off="-">
+                        <label class="form-check-label" for="flexCheckDefault" id="lb_gconsultoria">Cunsultoria</label><i class="fa fa-question-circle" id="help_gconsultoria"></i>
+                    </div>
+
+                  </div>
+
+
+
+                  <div class="row">
+                    <div class="button-row d-flex mt-4 col-12">
+                      <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Anterior</button>
+                      <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Siguiente</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Fin tercer paso -->
+
+              <!-- Inicio cuarto paso -->
+
+              <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
+                <h3 class="multisteps-form__title">Volumetria Estimada</h3>
+                <div class="multisteps-form__content">
+
+                  <div class="form-row mt-4">
+
+                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                      <input class="multisteps-form__input form-control" type="number" placeholder="Ventas Mes"/>
+                    </div>
+
+                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                      <input class="multisteps-form__input form-control" type="number" placeholder="Interacciones Mes"/>
+                    </div>
+
+                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                      <input class="multisteps-form__input form-control" type="number" placeholder="Clientes Potenciales Mes"/>
+ 
+                    </div>
+                    
+                  </div>
+                  
+                  <div class="button-row d-flex mt-4">
+                    <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Anterior</button>
+                    <button class="btn btn-success ml-auto" type="button" title="Enviar Cotización" id="btn_enviar">Enviar Simulación</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Fin cuarto paso -->
+
+            </form>
+          </div>
+
+
+        </div>
+
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<script  src="js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
+
+</body>
+</html>

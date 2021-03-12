@@ -1,5 +1,41 @@
 $(document).ready(function () {
 
+    // inicio habilitacion checkbox
+
+    $('#btn_ejecucion').on('change', function () {
+
+        if ($(this).is(':checked')) {
+
+            // Hacer algo si el checkbox ha sido seleccionado 
+
+            console.log('on');
+
+            $('#ivr').prop('disabled', false);
+            $('#voximplant').prop('disabled', false);
+            $('#c-ecommerce').prop('disabled', false);
+            $('#crm').prop('disabled', false);
+            
+
+        } else {
+
+            // Hacer algo si el checkbox ha sido deseleccionado 
+
+            console.log('off');
+            $('#ivr').prop('disabled', true);
+            $('#voximplant').prop('disabled', true);
+            $('#c-ecommerce').prop('disabled', true);
+            $('#crm').prop('disabled', true);
+
+            $('#ivr').prop('checked', false);
+            $('#voximplant').prop('checked', false);
+            $('#c-ecommerce').prop('checked', false);
+            $('#crm').prop('checked', false);
+
+  
+
+        }
+    });
+
     // inicio items help 
 
     $("#help_diseno_marca, #lb_diseno_marca").click(function () {
@@ -192,38 +228,14 @@ $(document).ready(function () {
         })
     });
 
-    // inicio habilitacion checkbox
-
-    $('#btn_marca').on('change', function () {
-
-        if ($(this).is(':checked')) {
-
-            // Hacer algo si el checkbox ha sido seleccionado 
-
-            console.log('on');
-
-            $('#g-rrss').prop('checked',true);
-
-        } else {
-
-            // Hacer algo si el checkbox ha sido deseleccionado 
-
-            console.log('off');
-        }
-    });
-
-
-
-
-
-
-
 
     // inicio validacion aceptacion de condiciones y envio de correo
 
     $("#btn_enviar").click(function () {
 
         // inicio validar campos
+
+        
 
         $('#principal').hide();
 

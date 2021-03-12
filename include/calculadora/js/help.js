@@ -194,22 +194,12 @@ $(document).ready(function () {
 
     // inicio habilitacion checkbox
 
-    $('#btn_marca').on('change', function () {
+    $('#btn_marca').change(function () {
 
-        if ($(this).is(':checked')) {
+        
+      $("input:checkbox").prop('checked', $(this).prop("checked"));
 
-            // Hacer algo si el checkbox ha sido seleccionado 
 
-            console.log('on');
-
-            $('#g-rrss').prop('checked',true);
-
-        } else {
-
-            // Hacer algo si el checkbox ha sido deseleccionado 
-
-            console.log('off');
-        }
     });
 
 

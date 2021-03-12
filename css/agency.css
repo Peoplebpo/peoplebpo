@@ -10,7 +10,6 @@ body {
   background: url('img/side_3.jpg');
   background-attachment: fixed;
 }
-}
 
 p {
   line-height: 1.75;
@@ -780,5 +779,5 @@ display: none;
 }
 
 .modal-dialog{
-  max-width: 950px;
+  max-width: 995px;
 }

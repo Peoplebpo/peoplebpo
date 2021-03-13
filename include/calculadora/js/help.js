@@ -84,7 +84,7 @@ $(document).ready(function () {
 
     // inicio habilita botones recursos estrategicos
 
-/*    $('#btn_estrategicos').on('change', function () {
+    $('#btn_estrategicos').on('change', function () {
 
         if ($(this).is(':checked')) {
 
@@ -110,7 +110,7 @@ $(document).ready(function () {
 
 
         }
-    });*/
+    });
 
     /*   $('#btn_ejecucion').on('change', function () {
 

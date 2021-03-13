@@ -1,8 +1,7 @@
 $(document).ready(function () {
 
 
-            // inicio habilitacion checkbox
-
+// inicio esconde div de solucion y capacidades
 
             $('#div_s-marca').hide();
             $('#div_s-call').hide();
@@ -28,7 +27,7 @@ $(document).ready(function () {
             $('#div_titulo-capacidades').hide();
             $('#div_c-digital').hide();
 
-            // inicio habilita botones recursos tecnologicos
+// inicio habilita botones recursos tecnologicos
 
             $('#btn_tecnologicos').on('change', function () {
 
@@ -54,7 +53,7 @@ $(document).ready(function () {
                 }
             });
 
-            // inicio habilita botones recursos ejecucion
+// inicio habilita botones recursos ejecucion
 
             $('#btn_ejecucion').on('change', function () {
 
@@ -84,7 +83,7 @@ $(document).ready(function () {
                 }
             });
 
-            // inicio habilita botones recursos estrategicos
+// inicio habilita botones recursos estrategicos
 
             $('#btn_estrategicos').on('change', function () {
 
@@ -110,11 +109,10 @@ $(document).ready(function () {
                     $('#div_s-office').hide();
                     $('#div_s-consultoria').hide();
 
-
                 }
             });
 
-            // habilita boton siguiente para pasar a capacidades
+// inicio oculta o muestra mensaje no ha seleccionado soluciones
 
             $('#btn_sig-capacidades').on('click', function () {
 
@@ -207,120 +205,155 @@ $(document).ready(function () {
                 }
             });
 
+// inicio muestra capacidades segun solucion seleccionada
+
+        $('#btn_sig-capacidades').on('click', function () {
+
+            if ( ($('#btn_tecnologicos').is(':checked')) && ($('#btn_marca').is(':checked')) ) {
+
+                // Hacer algo si el checkbox ha sido seleccionado 
+
+                    $('#div_c-rrss').show();
+
+                }else{
+
+                // Hacer algo si el checkbox ha sido seleccionado 
+
+                    $('#div_c-rrss').hide();
+                
+                }
+            
+                if ( ($('#btn_tecnologicos').is(':checked')) && ($('#btn_marketing').is(':checked')) ) {
+
+                    // Hacer algo si el checkbox ha sido seleccionado 
+    
+                        $('#div_c-digital').show();
+    
+                }else{
+    
+                    // Hacer algo si el checkbox ha sido seleccionado 
+    
+                        $('#div_c-digital').hide();
+                    
+                }
+
+                if ( ($('#btn_ejecucion').is(':checked')) && ($('#btn_call').is(':checked')) ) {
+
+                    // Hacer algo si el checkbox ha sido seleccionado 
+    
+                        $('#div_c-ivr').show();
+                        $('#div_c-voximplant').show();
+    
+                }else{
+    
+                    // Hacer algo si el checkbox ha sido seleccionado 
+    
+                        $('#div_c-ivr').hide();
+                        $('#div_c-voximplant').hide();
+                    
+                }
+
+                if ( ($('#btn_ejecucion').is(':checked')) && ($('#btn_whatsapp').is(':checked')) ) {
+
+                    // Hacer algo si el checkbox ha sido seleccionado 
+    
+                        $('#div_c-crm').show();
+    
+                }else{
+    
+                    // Hacer algo si el checkbox ha sido seleccionado 
+    
+                        $('#div_c-crm').hide();
+                    
+                }
+
+                if ( ($('#btn_ejecucion').is(':checked')) && ($('#btn_rrss').is(':checked')) ) {
+
+                    // Hacer algo si el checkbox ha sido seleccionado 
+    
+                        $('#div_c-ecommerce').show();
+    
+                }else{
+    
+                    // Hacer algo si el checkbox ha sido seleccionado 
+    
+                        $('#div_c-ecommerce').hide();
+                    
+                }
+
+                if ( ($('#btn_ejecucion').is(':checked')) && ($('#btn_ecommerce').is(':checked')) ) {
+
+                    // Hacer algo si el checkbox ha sido seleccionado 
+    
+                        $('#div_c-ecommerce').show();
+    
+                }else{
+    
+                    // Hacer algo si el checkbox ha sido seleccionado 
+    
+                        $('#div_c-ecommerce').hide();
+                    
+                }
+
+                if ( ($('#btn_estrategicos').is(':checked')) && ($('#btn_ejecutivos').is(':checked')) ) {
+
+                    // Hacer algo si el checkbox ha sido seleccionado 
+    
+                        $('#div_c-customer').show();
+    
+                }else{
+    
+                    // Hacer algo si el checkbox ha sido seleccionado 
+    
+                        $('#div_c-customer').hide();
+                    
+                }
+
+                if ( ($('#btn_estrategicos').is(':checked')) && ($('#btn_sac').is(':checked')) ) {
+
+                    // Hacer algo si el checkbox ha sido seleccionado 
+    
+                        $('#div_c-center').show();
+    
+                }else{
+    
+                    // Hacer algo si el checkbox ha sido seleccionado 
+    
+                        $('#div_c-center').hide();
+                    
+                }
+
+                if ( ($('#btn_estrategicos').is(':checked')) && ($('#btn_office').is(':checked')) ) {
+
+                    // Hacer algo si el checkbox ha sido seleccionado 
+    
+                        $('#div_c-bpo').show();
+    
+                }else{
+    
+                    // Hacer algo si el checkbox ha sido seleccionado 
+    
+                        $('#div_c-bpo').hide();
+                    
+                }
+
+                if ( ($('#btn_estrategicos').is(':checked')) && ($('#btn_consultoria').is(':checked')) ) {
+
+                    // Hacer algo si el checkbox ha sido seleccionado 
+    
+                        $('#div_c-consultoria').show();
+    
+                }else{
+    
+                    // Hacer algo si el checkbox ha sido seleccionado 
+    
+                        $('#div_c-consultoria').hide();
+                    
+                }
+        });
 
 
-                /*   $('#btn_ejecucion').on('change', function () {
-
-                       if ($(this).is(':checked')) {
-
-                           // Hacer algo si el checkbox ha sido seleccionado 
-
-                           console.log('on');
-
-                           $('#div_ivr').show();
-                           $('#div_voximplant').show();
-                           $('#div_ecommerce').show();
-                           $('#div_crm').show();
-                           $('#div_vacio1').hide();
-                           $('#div_vacio2').hide();
-                           $('#div_vacio3').hide();
-
-                           $('#ivr').prop('disabled', false);
-                           $('#voximplant').prop('disabled', false);
-                           $('#c-ecommerce').prop('disabled', false);
-                           $('#crm').prop('disabled', false);
-
-
-                       } else {
-
-                           // Hacer algo si el checkbox ha sido deseleccionado 
-
-                           console.log('off');
-                           $('#ivr').prop('disabled', true);
-                           $('#voximplant').prop('disabled', true);
-                           $('#c-ecommerce').prop('disabled', true);
-                           $('#crm').prop('disabled', true);
-
-                           $('#div_ivr').hide();
-                           $('#div_voximplant').hide();
-                           $('#div_ecommerce').hide();
-                           $('#div_crm').hide();
-
-
-                       }
-                   });*/
-
-
-
-                /*  $('#btn_tecnologicos').on('change', function () {
-
-                      if ($(this).is(':checked')) {
-
-                          // Hacer algo si el checkbox ha sido seleccionado 
-
-                          console.log('on');
-
-                          $('#div_bpo').show();
-                          $('#div_center').show();
-                          $('#div_customer').show();
-                          $('#div_c-colsultoria').show();
-
-                          $('#c-consultoria').prop('disabled', false);
-                          $('#bpo').prop('disabled', false);
-                          $('#contact_center').prop('disabled', false);
-                          $('#customer_experience').prop('disabled', false);
-
-
-
-                      } else {
-
-                          // Hacer algo si el checkbox ha sido deseleccionado 
-
-                          console.log('off');
-
-                          $('#bpo').prop('disabled', true);
-                          $('#contact_center').prop('disabled', true);
-                          $('#customer_experience').prop('disabled', true);
-                          $('#c-consultoria').prop('disabled', true);
-
-                      }
-                  }); */
-
-                /*   $('#btn_tecnologicos').on('change', function () {
-
-        if ($(this).is(':checked')) {
-
-            // Hacer algo si el checkbox ha sido seleccionado 
-
-            console.log('on');
-
-            $('#div_rrss').show();
-            $('#div_vacio1').show();
-            $('#div_vacio2').show();
-            $('#div_vacio3').show();
-
-            $('#g-rrss').prop('disabled', false);
-
-
-
-
-        } else {
-
-            // Hacer algo si el checkbox ha sido deseleccionado 
-
-            console.log('off');
-
-            $('#g-rrss').prop('disabled', true);
-
-            $('#div_rrss').hide();
-
-        }
-    });
-
-*/
-
-
-                // inicio items help 
+// inicio cuadro mensajes descripcion de ayuda 
 
                 $("#help_diseno_marca, #lb_diseno_marca").click(function () {
 
@@ -522,8 +555,9 @@ $(document).ready(function () {
                     })
                 });
 
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-                // inicio validacion aceptacion de condiciones y envio de correo
+// inicio validacion aceptacion de condiciones y envio de correo electronico
 
                 $("#btn_enviar").click(function () {
 

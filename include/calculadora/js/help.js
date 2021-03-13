@@ -1,6 +1,58 @@
 $(document).ready(function () {
 
+
     // inicio habilitacion checkbox
+
+
+    $('#div_s-marca').hide();
+    $('#div_s-call').hide();
+    $('#div_s-ejecutivos').hide();
+    $('#div_s-marketing').hide();
+    $('#div_s-office').hide();
+    $('#div_s-marketing').hide();
+    $('#div_s-rrss').hide();
+    $('#div_s-consultoria').hide();
+    $('#div_s-ecommerce').hide();
+    $('#div_s-sac').hide();
+    $('#div_s-whatsapp').hide();
+
+    $('#div_rrss').hide();
+    $('#div_ivr').hide();
+    $('#div_voximplant').hide();
+    $('#div_ecommerce').hide();
+    $('#div_crm').hide();
+    $('#div_bpo').hide();
+    $('#div_center').hide();
+    $('#div_customer').hide();
+    $('#div_c-colsultoria').hide();
+
+    // inicio habilita botones recursos tecnologicos
+
+    $('#btn_tecnologicos').on('change', function () {
+
+        if ($(this).is(':checked')) {
+
+            // Hacer algo si el checkbox ha sido seleccionado 
+
+            console.log('on');
+
+            $('#div_s-marca').show();
+            $('#div_s-marketing').show();
+
+        } else {
+
+            // Hacer algo si el checkbox ha sido deseleccionado 
+
+            console.log('off');
+
+            $('#div_s-marca').hide();
+            $('#div_s-marketing').hide();
+
+
+        }
+    });
+
+    // inicio habilita botones recursos ejecucion
 
     $('#btn_ejecucion').on('change', function () {
 
@@ -10,31 +62,166 @@ $(document).ready(function () {
 
             console.log('on');
 
-            $('#ivr').prop('disabled', false);
-            $('#voximplant').prop('disabled', false);
-            $('#c-ecommerce').prop('disabled', false);
-            $('#crm').prop('disabled', false);
-            
+            $('#div_s-ecommerce').show();
+            $('#div_s-call').show();
+            $('#div_s-rrss').show();
+            $('#div_s-whatsapp').show();
 
         } else {
 
             // Hacer algo si el checkbox ha sido deseleccionado 
 
             console.log('off');
-            $('#ivr').prop('disabled', true);
-            $('#voximplant').prop('disabled', true);
-            $('#c-ecommerce').prop('disabled', true);
-            $('#crm').prop('disabled', true);
 
-            $('#ivr').prop('checked', false);
-            $('#voximplant').prop('checked', false);
-            $('#c-ecommerce').prop('checked', false);
-            $('#crm').prop('checked', false);
+            $('#div_s-ecommerce').hide();
+            $('#div_s-call').hide();
+            $('#div_s-rrss').hide();
+            $('#div_s-whatsapp').hide();
 
-  
 
         }
     });
+
+    // inicio habilita botones recursos estrategicos
+
+/*    $('#btn_estrategicos').on('change', function () {
+
+        if ($(this).is(':checked')) {
+
+            // Hacer algo si el checkbox ha sido seleccionado 
+
+            console.log('on');
+
+            $('#div_s-sac').show();
+            $('#div_s-ejecutivos').show();
+            $('#div_s-office').show();
+            $('#div_s-consultoria').show();
+
+        } else {
+
+            // Hacer algo si el checkbox ha sido deseleccionado 
+
+            console.log('off');
+
+            $('#div_s-sac').hide();
+            $('#div_s-ejecutivos').hide();
+            $('#div_s-office').hide();
+            $('#div_s-consultoria').hide();
+
+
+        }
+    });*/
+
+    /*   $('#btn_ejecucion').on('change', function () {
+
+           if ($(this).is(':checked')) {
+
+               // Hacer algo si el checkbox ha sido seleccionado 
+
+               console.log('on');
+
+               $('#div_ivr').show();
+               $('#div_voximplant').show();
+               $('#div_ecommerce').show();
+               $('#div_crm').show();
+               $('#div_vacio1').hide();
+               $('#div_vacio2').hide();
+               $('#div_vacio3').hide();
+
+               $('#ivr').prop('disabled', false);
+               $('#voximplant').prop('disabled', false);
+               $('#c-ecommerce').prop('disabled', false);
+               $('#crm').prop('disabled', false);
+
+
+           } else {
+
+               // Hacer algo si el checkbox ha sido deseleccionado 
+
+               console.log('off');
+               $('#ivr').prop('disabled', true);
+               $('#voximplant').prop('disabled', true);
+               $('#c-ecommerce').prop('disabled', true);
+               $('#crm').prop('disabled', true);
+
+               $('#div_ivr').hide();
+               $('#div_voximplant').hide();
+               $('#div_ecommerce').hide();
+               $('#div_crm').hide();
+
+
+           }
+       });*/
+
+
+
+    /*  $('#btn_tecnologicos').on('change', function () {
+
+          if ($(this).is(':checked')) {
+
+              // Hacer algo si el checkbox ha sido seleccionado 
+
+              console.log('on');
+
+              $('#div_bpo').show();
+              $('#div_center').show();
+              $('#div_customer').show();
+              $('#div_c-colsultoria').show();
+
+              $('#c-consultoria').prop('disabled', false);
+              $('#bpo').prop('disabled', false);
+              $('#contact_center').prop('disabled', false);
+              $('#customer_experience').prop('disabled', false);
+
+
+
+          } else {
+
+              // Hacer algo si el checkbox ha sido deseleccionado 
+
+              console.log('off');
+
+              $('#bpo').prop('disabled', true);
+              $('#contact_center').prop('disabled', true);
+              $('#customer_experience').prop('disabled', true);
+              $('#c-consultoria').prop('disabled', true);
+
+          }
+      }); */
+
+    /*   $('#btn_tecnologicos').on('change', function () {
+
+        if ($(this).is(':checked')) {
+
+            // Hacer algo si el checkbox ha sido seleccionado 
+
+            console.log('on');
+
+            $('#div_rrss').show();
+            $('#div_vacio1').show();
+            $('#div_vacio2').show();
+            $('#div_vacio3').show();
+
+            $('#g-rrss').prop('disabled', false);
+
+
+
+
+        } else {
+
+            // Hacer algo si el checkbox ha sido deseleccionado 
+
+            console.log('off');
+
+            $('#g-rrss').prop('disabled', true);
+
+            $('#div_rrss').hide();
+
+        }
+    });
+
+*/
+
 
     // inicio items help 
 
@@ -235,7 +422,7 @@ $(document).ready(function () {
 
         // inicio validar campos
 
-        
+
 
         $('#principal').hide();
 

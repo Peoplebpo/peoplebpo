@@ -198,7 +198,7 @@
 
                   <div class="button-row d-flex mt-4">
                     <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Anterior</button>
-                    <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Siguiente</button>
+                    <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next" id="btn_sig-capacidades">Siguiente</button>
                   </div>
                 </div>
               </div>
@@ -208,57 +208,110 @@
               <!-- Inicio tercer paso -->
 
               <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
-                <h3 class="multisteps-form__title" style="text-align: center;">Adquiere Capacidades</h3>
+                <h3 class="multisteps-form__title" style="text-align: center;">Capacidades Adquiridas</h3>
                 <div class="multisteps-form__content">
+
+                  <div class="form-row mt-4" id="div_titulo-capacidades">
+                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                        <label class="form-check-label"><strong>Recursos Tecnológicos</strong></label>
+                    </div>
+                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                        <label class="form-check-label"><strong>Recursos de Ejecución</strong></label>
+                    </div>
+                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                        <label class="form-check-label"><strong>Recursos de Estratégicos</strong></label>
+                    </div>
+                  </div>
+
+                  <div class="form-row mt-4" id="div_aviso1">
+                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                    </div>
+                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                    </div>
+                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                    </div>
+                 </div>
+
+                 <div class="form-row mt-4" id="div_aviso2">
+                  <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                  </div>
+                  <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                    <label class="form-check-label" for="flexCheckDefault" style="background-color: red; color: white; text-align: center; border: wheat; border-radius: 5px;">NO HA SELECCIONADO UNA SOLUCIÓN</label>
+
+                  </div>
+                  <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                  </div>
+               </div>
+
                   <div class="form-row mt-4">
 
-                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-                      <input class="multisteps-form__input" type="checkbox" id="g-rrss" data-toggle="toggle" data-onstyle="success" data-on="+" data-off="-" disabled>
+                  <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                    <div id="div_c-rrss">
+                      <i class="fa fa-check fa-2x" style="color: greenyellow;"></i>
                       <label class="form-check-label" for="flexCheckDefault" id="lb_grrss">Gestión de RRSS</label><i class="fa fa-question-circle" id="help_grrss"></i>
                     </div>
+                  </div>
 
-                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-                        <input class="multisteps-form__input" type="checkbox" value="" id="ivr" data-toggle="toggle" data-onstyle="success" data-on="+" data-off="-" disabled>
+                  <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                      <div id="div_c-ivr">
+                      <i class="fa fa-check fa-2x" style="color: greenyellow;"></i>
                         <label class="form-check-label" for="flexCheckDefault" id="lb_ivr">IVR</label><i class="fa fa-question-circle" id="help_ivr"></i>
-                    </div> 
-                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-                        <input class="multisteps-form__input" type="checkbox" value="" id="bpo" data-toggle="toggle" data-onstyle="success" data-on="+" data-off="-" disabled>
+                      </div> 
+                  </div>
+
+                  <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                      <div id="div_c-bpo">
+                      <i class="fa fa-check fa-2x" style="color: greenyellow;"></i>
                         <label class="form-check-label" for="flexCheckDefault" id="lb_bpo">BPO</label><i class="fa fa-question-circle" id="help_bpo"></i>
-                    </div>
+                      </div>
+                  </div>
 
                   </div>
 
                   <div class="form-row mt-4">
 
                     <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-                      
+                      <div id="div_c-digital">
+                        <i class="fa fa-check fa-2x" style="color: greenyellow;"></i>
+                        <label class="form-check-label" for="flexCheckDefault" id="lb_digital">Marketing Digital</label><i class="fa fa-question-circle" id="help_digital"></i>
+                      </div>
                     </div>
 
-                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-                        <input class="multisteps-form__input" type="checkbox" value="" id="voximplant" data-toggle="toggle" data-onstyle="success" data-on="+" data-off="-" disabled>
+                  <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                      <div id="div_c-voximplant">
+                      <i class="fa fa-check fa-2x" style="color: greenyellow;"></i>
                         <label class="form-check-label" for="flexCheckDefault" id="lb_vox">Voximplant</label><i class="fa fa-question-circle" id="help_vox"></i>
-                    </div> 
-                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-                        <input class="multisteps-form__input" type="checkbox" value="" id="contact_center" data-toggle="toggle" data-onstyle="success" data-on="+" data-off="-" disabled>
+                      </div> 
+                  </div>
+
+                  <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                      <div id="div_c-center">
+                      <i class="fa fa-check fa-2x" style="color: greenyellow;"></i>
                         <label class="form-check-label" for="flexCheckDefault" id="lb_center">Contact Center</label><i class="fa fa-question-circle" id="help_center"></i>
-                    </div>
+                      </div>
+                  </div>
 
                   </div>
 
                   <div class="form-row mt-4">
 
-                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                  <div class="col-12 col-sm-4 mt-4 mt-sm-0">
                       
-                    </div>
+                  </div>
 
-                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-                        <input class="multisteps-form__input" type="checkbox" value="" id="c-ecommerce" data-toggle="toggle" data-onstyle="success" data-on="+" data-off="-" disabled>
+                  <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                      <div id="div_c-ecommerce">
+                      <i class="fa fa-check fa-2x" style="color: greenyellow;"></i>
                         <label class="form-check-label" for="flexCheckDefault" id="lb_gecommerce">E-commerce</label><i class="fa fa-question-circle" id="help_gecommerce"></i>
                     </div> 
-                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-                        <input class="multisteps-form__input" type="checkbox" value="" id="customer_experience" data-toggle="toggle" data-onstyle="success" data-on="+" data-off="-" disabled>
+                  </div>
+
+                  <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                      <div id="div_c-customer">
+                      <i class="fa fa-check fa-2x" style="color: greenyellow;"></i>
                         <label class="form-check-label" for="flexCheckDefault" id="lb_gcustomer">Customer Experience</label><i class="fa fa-question-circle" id="help_gcustomer"></i>
-                    </div>
+                      </div>
+                  </div>
 
                   </div>
 
@@ -268,14 +321,19 @@
                       
                     </div>
 
-                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-                        <input class="multisteps-form__input" type="checkbox" value="" id="crm" data-toggle="toggle" data-onstyle="success" data-on="+" data-off="-" disabled>
+                  <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                      <div id="div_c-crm">
+                      <i class="fa fa-check fa-2x" style="color: greenyellow;"></i>
                         <label class="form-check-label" for="flexCheckDefault" id="lb_gcrm">CRM</label><i class="fa fa-question-circle" id="help_gcrm"></i>
-                    </div> 
-                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-                        <input class="multisteps-form__input" type="checkbox" value="" id="c-consultoria" data-toggle="toggle" data-onstyle="success" data-on="+" data-off="-" disabled>
+                      </div>
+                  </div>
+
+                  <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                      <div id="div_c-consultoria">
+                      <i class="fa fa-check fa-2x" style="color: greenyellow;"></i>
                         <label class="form-check-label" for="flexCheckDefault" id="lb_gconsultoria">Cunsultoria</label><i class="fa fa-question-circle" id="help_gconsultoria"></i>
-                    </div>
+                      </div>
+                  </div>
 
                   </div>
 

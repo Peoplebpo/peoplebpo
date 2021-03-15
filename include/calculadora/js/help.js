@@ -572,11 +572,51 @@ $(document).ready(function () {
 
                 $("#btn_enviar").click(function () {
 
-                    // inicio validar campos
+        // inicio validar campos
+        var nombre_contacto     = $('#nombre').val();
+        var nombre_empresa      = $('#nombre_empresa').val();
+        var rut_empresa         = $('#rut_empresa').val();
+        var email_empresa       = $('#email').val();
+        var telefono            = $('#telefono').val();
+        var pais                = $('#pais').val();
+        var ventas_mes          = $('#ventas_mes').val();
+        var interacciones_mes   = $('#interacciones_mes').val();
+        var potenciales_mes     = $('#potenciales_mes').val();
+        
+        if (
+        $('#nombre').val() == '' ||
+        $('#nombre_empresa').val() == '' ||
+        $('#rut_empresa').val() == ''||
+        $('#email').val() == ''||
+        $('#telefono').val() == ''||
+        $('#pais').val() == ''||
+        $('#potenciales_mes').val() == ''||
+        $('#ventas_mes').val() == '' ||
+        $('#interacciones_mes').val() == '') {
 
+        Swal.fire({
+        position: 'top',
+        icon: 'error',
+        title: 'ERROR',
+        text: 'Complete todos los campos',
+        })
 
+        return false;
 
-                    $('#principal').hide();
+        }else if ($('#email').val().indexOf('@', 0) == -1 || $('#email').val().indexOf('.', 0) == -1) {
+            
+        Swal.fire({
+        position: 'top',
+        icon: 'error',
+        title: 'ERROR',
+        text: 'Correo ingresado no es valido',
+        })
+                
+        return false;
+
+        }else{
+
+        $('#principal').hide();
 
                     Swal.fire({
                         title: 'Condiciones Manejo de Datos',
@@ -619,7 +659,7 @@ $(document).ready(function () {
 
                     })
 
-
+                }   
                 });
 
 

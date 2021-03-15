@@ -46,36 +46,37 @@
 
                 <!-- inicio primer paso -->
 
+
                 <div class="multisteps-form__panel shadow p-4 rounded bg-white js-active" data-animation="scaleIn">
                   <h3 class="multisteps-form__title">Información del Cliente</h3>
                   <div class="multisteps-form__content">
                     <div class="form-row mt-4">
                       <div class="col-12 col-sm-6">
-                        <input class="multisteps-form__input form-control" name="nombre" type="text" placeholder="Nombre Contacto" />
+                        <input class="multisteps-form__input form-control" id="nombre" name="nombre" type="text" placeholder="Nombre Contacto" />
                       </div>
                       <div class="col-12 col-sm-6 mt-4 mt-sm-0">
-                        <input class="multisteps-form__input form-control" name="nombre_empresa" type="text" placeholder="Nombre Empresa" />
+                        <input class="multisteps-form__input form-control" id="nombre_empresa" name="nombre_empresa" type="text" placeholder="Nombre Empresa" />
                       </div>
                     </div>
                     <div class="form-row mt-4">
                       <div class="col-12 col-sm-6">
-                        <input class="multisteps-form__input form-control" name="rut" type="text" placeholder="Rut / Dni" />
+                        <input class="multisteps-form__input form-control" id="rut_empresa" name="rut_empresa" type="text" placeholder="Rut / Dni" />
                       </div>
                       <div class="col-12 col-sm-6 mt-4 mt-sm-0">
-                        <input class="multisteps-form__input form-control" name="email" type="email" placeholder="Email Contacto" />
+                        <input class="multisteps-form__input form-control" id="email" name="email" type="email" placeholder="Email Contacto" />
                       </div>
                     </div>
                     <div class="form-row mt-4">
                       <div class="col-12 col-sm-6">
-                        <input class="multisteps-form__input form-control" name="telefono" type="number" placeholder="Teléfono Contacto" />
+                        <input class="multisteps-form__input form-control" id="telefono" name="telefono" type="number" placeholder="Teléfono Contacto" />
                       </div>
                       <div class="col-12 col-sm-6 mt-4 mt-sm-0">
-                        <select class="multisteps-form__select form-control" name="pais">
-                          <option selected="selected">País</option>
-                          <option>Chile</option>
-                          <option>Perú</option>
-                          <option>Colombia</option>
-                        </select>
+                        <select class="multisteps-form__select form-control" id="pais">
+                        <option value="" selected="selected">País</option>
+                        <option value="Chile">Chile</option>
+                        <option value="Perú">Perú</option>
+                        <option value="Colombia">Colombia</option>
+                      </select>
                       </div>
                     </div>
                     <div class="button-row d-flex mt-4">
@@ -406,15 +407,15 @@
                     <div class="form-row mt-4">
 
                       <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-                        <input class="multisteps-form__input form-control" type="number" placeholder="Ventas Mes" name="ventas_mes"/>
+                        <input class="multisteps-form__input form-control" id="ventas_mes" type="number" placeholder="Ventas Mes" name="ventas_mes"/>
                       </div>
 
                       <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-                        <input class="multisteps-form__input form-control" type="number" placeholder="Interacciones Mes" name="interacciones_mes"/>
+                        <input class="multisteps-form__input form-control" id="interacciones_mes" type="number" placeholder="Interacciones Mes" name="interacciones_mes"/>
                       </div>
 
                       <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-                        <input class="multisteps-form__input form-control" type="number" placeholder="Clientes Potenciales Mes" name="potenciales_mes"/>
+                        <input class="multisteps-form__input form-control" id="potenciales_mes" type="number" placeholder="Clientes Potenciales Mes" name="potenciales_mes"/>
                       </div>
 
                     </div>

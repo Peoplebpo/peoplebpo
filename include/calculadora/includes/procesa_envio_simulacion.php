@@ -1,109 +1,41 @@
 <?php
 
-    require("../vendor/phpmailer/class.phpmailer.php");
-    require("../vendor/phpmailer/class.smtp.php");
+// Primera ventana
 
-    $email  = (isset($_POST['email'])) ? $_POST['email'] : '';
-    $nombre = (isset($_POST['nombre'])) ? $_POST['nombre'] : ''; 
-
-// Inicio enviar correo de simulacion
-
-    $mensaje 		= "Mensaje Simulación Solicitada";
-
-    $destinatario 	= $email;
-
-    $nombre 		= "Simulador de Soluciones a Adquirir";
-
-    $email 			= "noreply@peoplebpo.com";
-
-    $smtpHost 		= "mail.peoplebpo.com";  // Dominio alternativo brindado en el email de alta 
-
-    $smtpUsuario 	= "noreply@peoplebpo.com";  // Mi cuenta de correo
-
-    $smtpClave 		= "413471*Iio";  // Mi contraseña
-
-    $mail 			= new PHPMailer();
-
-    $mail->IsSMTP();
-
-    $mail->SMTPAuth = true;
-
-    $mail->Port 	= 25; 
-
-    $mail->IsHTML(true); 
-
-    $mail->CharSet 	= "utf-8";
-
-    $mail->Host 	= $smtpHost; 
-
-    $mail->Username = $smtpUsuario; 
-
-    $mail->Password = $smtpClave;
-
-    $mail->From 	= $email; // Email desde donde envío el correo.
-
-    $mail->FromName = $nombre;
-
-    $mail->AddAddress($destinatario); // Esta es la dirección a donde enviamos los datos del formulario
-
-    $mail->Subject 	= "Simulación Solicitada"; // Este es el titulo del email.
-
-    $mensajeHtml 	= nl2br($mensaje);
-
-    $mail->Body 	= "
-
-<html> 
-
-<body> 
-
-
-
-    <h1>SOLICITUD DE SIMULACIÓN DE SOLUCIONES</h1>
-
-
-    <p><h3>Don:</h3> {$nombre}</p>
-
-
-
-    <p><h3>Email:</h3> {$email}</p>
+    $nombre_solicitante = (isset($_POST['nombre'])) ? $_POST['nombre'] : '';
+    $nombre_empres      = (isset($_POST['nombre_empresa'])) ? $_POST['nombre_empresa'] : '';
+    $rut                = (isset($_POST['rut'])) ? $_POST['rut'] : '';
+    $email_solicitante  = (isset($_POST['email'])) ? $_POST['email'] : '';
+    $telefono           = (isset($_POST['telefono'])) ? $_POST['telefono'] : '';
+    $pais               = (isset($_POST['pais'])) ? $_POST['pais'] : '';
     
-    
-    
-    <p><h3>LINK:</h3> www.portatehoy.com</p>
+// Segunda Ventana
 
-</body> 
+    $rec_tecnologicos   = (isset($_POST['rec_tecnologicos'])) ? $_POST['rec_tecnologicos'] : '';
+    $rec_ejecucion      = (isset($_POST['rec_ejecucion'])) ? $_POST['rec_ejecucion'] : '';
+    $rec_estrategicos   = (isset($_POST['rec_estrategicos'])) ? $_POST['rec_estrategicos'] : '';
+    $diseno_marca       = (isset($_POST['diseno_marca'])) ? $_POST['diseno_marca'] : '';
+    $click_to_call      = (isset($_POST['click_to_call'])) ? $_POST['click_to_call'] : '';
+    $ejecutivos         = (isset($_POST['ejecutivos'])) ? $_POST['ejecutivos'] : '';
 
-</html>
+    $marketing_digital  = (isset($_POST['marketing_digital'])) ? $_POST['marketing_digital'] : '';
+    $whatsapp           = (isset($_POST['whatsapp'])) ? $_POST['whatsapp'] : '';
+    $back_office        = (isset($_POST['back_office'])) ? $_POST['back_office'] : '';
+    $rrss               = (isset($_POST['rrss'])) ? $_POST['rrss'] : '';
+    $consultoria        = (isset($_POST['consultoria'])) ? $_POST['consultoria'] : '';
+    $ecommerce          = (isset($_POST['ecommerce'])) ? $_POST['ecommerce'] : '';
+    $sac                = (isset($_POST['sac'])) ? $_POST['sac'] : '';
 
+// Tercera Ventana
 
+    $ventas_mes         = (isset($_POST['ventas_mes'])) ? $_POST['ventas_mes'] : '';
+    $interacciones_mes  = (isset($_POST['interacciones_mes'])) ? $_POST['interacciones_mes'] : '';
+    $potenciales_mes    = (isset($_POST['potenciales_mes'])) ? $_POST['potenciales_mes'] : '';
 
-<br />"; // Texto del email en formato HTML
+// Inicio enviar simulacion
 
-$mail->AltBody = "{$mensaje} \n\n "; // Texto sin formato HTML
+    include ("email.php");
 
-// FIN - VALORES A MODIFICAR //
-
-
-
-$mail->SMTPOptions = array(
-
-    'ssl' => array(
-
-    'verify_peer' => false,
-
-    'verify_peer_name' => false,
-
-    'allow_self_signed' => true
-
-)
-
-);
-
-$estadoEnvio = $mail->Send(); 
-
-
-
-?>
 
 
 ?>

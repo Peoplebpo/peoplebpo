@@ -599,7 +599,7 @@ $(document).ready(function () {
 
                     $.ajax({
                         type: "POST",
-                        url: "procesa_agen_ingresar_referido.php",
+                        url: "procesa_envio_simulacion.php",
                         data: datos,
                         
 

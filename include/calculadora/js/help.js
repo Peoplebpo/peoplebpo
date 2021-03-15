@@ -234,8 +234,30 @@ $(document).ready(function () {
     $("#btn_enviar").click(function () {
 
         // inicio validar campos
-
+        var nombre_contacto = $('#nombre_contacto').val();
+        var nombre_empresa  = $('#nombre_empresa').val();
+        var rut_empresa     = $('#rut_empresa').val();
+        var email_empresa   = $('#email_empresa').val();
+        var telefono        = $('#telefono').val();
+        var pais            = $('#pais').val();
         
+        if (
+        $('#nombre_contacto').val() == '' ||
+        $('#nombre_empresa').val() == '' ||
+        $('#rut_empresa').val() == ''||
+        $('#email_empresa').val() == ''||
+        $('#telefono').val() == ''||
+        $('#pais').val() == '') {
+
+        Swal.fire({
+        position: 'top',
+        icon: 'error',
+        title: 'ERROR',
+        text: 'Complete todos los campos',
+        })
+        return false;
+
+        }else{
 
         $('#principal').hide();
 
@@ -257,6 +279,8 @@ $(document).ready(function () {
             }
 
         })
+
+        }
 
 
     });

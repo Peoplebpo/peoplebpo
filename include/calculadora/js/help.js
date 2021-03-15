@@ -123,6 +123,7 @@ $(document).ready(function () {
                     $('#div_aviso1').hide();
                     $('#div_aviso2').hide();
                     $('#div_titulo-capacidades').show();
+                    $('#btn_sig_volumetria').attr("disabled", false);
 
                 }else if ( ($('#btn_estrategicos').is(':checked')) && ($('#btn_sac').is(':checked')) ) {
 
@@ -131,6 +132,7 @@ $(document).ready(function () {
                     $('#div_aviso1').hide();
                     $('#div_aviso2').hide();
                     $('#div_titulo-capacidades').show();
+                    $('#btn_sig_volumetria').attr("disabled", false);
 
                 }else if ( ($('#btn_estrategicos').is(':checked')) && ($('#btn_office').is(':checked')) ) {
 
@@ -139,6 +141,7 @@ $(document).ready(function () {
                     $('#div_aviso1').hide();
                     $('#div_aviso2').hide();
                     $('#div_titulo-capacidades').show();
+                    $('#btn_sig_volumetria').attr("disabled", false);
 
                 }else if ( ($('#btn_estrategicos').is(':checked')) && ($('#btn_consultoria').is(':checked')) ) {
 
@@ -147,6 +150,7 @@ $(document).ready(function () {
                     $('#div_aviso1').hide();
                     $('#div_aviso2').hide();
                     $('#div_titulo-capacidades').show();
+                    $('#btn_sig_volumetria').attr("disabled", false);
 
                 }else if ( ($('#btn_ejecucion').is(':checked')) && ($('#btn_call').is(':checked')) ) {
 
@@ -155,6 +159,7 @@ $(document).ready(function () {
                     $('#div_aviso1').hide();
                     $('#div_aviso2').hide();
                     $('#div_titulo-capacidades').show();
+                    $('#btn_sig_volumetria').attr("disabled", false);
 
                 }else if ( ($('#btn_ejecucion').is(':checked')) && ($('#btn_whatsapp').is(':checked')) ) {
 
@@ -163,6 +168,7 @@ $(document).ready(function () {
                     $('#div_aviso1').hide();
                     $('#div_aviso2').hide();
                     $('#div_titulo-capacidades').show();
+                    $('#btn_sig_volumetria').attr("disabled", false);
 
                 }else if ( ($('#btn_ejecucion').is(':checked')) && ($('#btn_rrss').is(':checked')) ) {
 
@@ -171,6 +177,7 @@ $(document).ready(function () {
                     $('#div_aviso1').hide();
                     $('#div_aviso2').hide();
                     $('#div_titulo-capacidades').show();
+                    $('#btn_sig_volumetria').attr("disabled", false);
 
                 }else if ( ($('#btn_ejecucion').is(':checked')) && ($('#btn_ecommerce').is(':checked')) ) {
 
@@ -179,6 +186,7 @@ $(document).ready(function () {
                     $('#div_aviso1').hide();
                     $('#div_aviso2').hide();
                     $('#div_titulo-capacidades').show();
+                    $('#btn_sig_volumetria').attr("disabled", false);
 
                 }else if ( ($('#btn_tecnologicos').is(':checked')) && ($('#btn_marca').is(':checked')) ) {
 
@@ -187,6 +195,7 @@ $(document).ready(function () {
                     $('#div_aviso1').hide();
                     $('#div_aviso2').hide();
                     $('#div_titulo-capacidades').show();
+                    $('#btn_sig_volumetria').attr("disabled", false);
 
                 }else if ( ($('#btn_tecnologicos').is(':checked')) && ($('#btn_marketing').is(':checked')) ) {
 
@@ -195,12 +204,14 @@ $(document).ready(function () {
                     $('#div_aviso1').hide();
                     $('#div_aviso2').hide();
                     $('#div_titulo-capacidades').show();
+                    $('#btn_sig_volumetria').attr("disabled", false);
 
                 }else{
                     
                     $('#div_aviso1').show();
                     $('#div_aviso2').show();
                     $('#div_titulo-capacidades').hide();
+                    $('#btn_sig_volumetria').attr("disabled", true);
 
                 }
             });
@@ -579,6 +590,28 @@ $(document).ready(function () {
                             Swal.fire('Simulación Enviada', '', 'success'),
                                 $('#btn_enviar').attr("disabled", true),
                                 $('#principal').show();
+                                
+// Inicio Enviar datos seleccionados a php para que envie simulacion por correo electronico
+
+                    var datos = $('#frm_simulacion').serialize();
+
+                    console.log(datos);
+
+                    $.ajax({
+                        type: "POST",
+                        url: "procesa_agen_ingresar_referido.php",
+                        data: datos,
+                        
+
+                        success: function(a) {
+
+                            
+                            
+                        } 
+                    });
+
+// Fin Enviar datos seleccionados a php para que envie simulacion por correo electronico
+
                         } else if (result.isDenied) {
                             Swal.fire('No Acepto las Condiciones', '', 'info'),
                                 $('#principal').show();

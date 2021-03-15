@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!--Code By Webdevtrick ( https://webdevtrick.com )-->
-<html lang="en" >
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Productos Peoplebpo</title>
@@ -9,393 +10,440 @@
 
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
-  <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css"
+    rel="stylesheet">
   <script src="https://use.fontawesome.com/d9126b89bd.js"></script>
   <link rel="stylesheet" href="css/main.css">
   <script src="js/help.js"></script>
 </head>
+
 <body>
-<div id="principal">
-<header class="header">
-  <h1 class="header__title">¿Que productos desea simular?</h1>
-</header>
-<div class="content">
-    <div class="container overflow-hidden">
-      <div class="multisteps-form">
-        <div class="row">
-          <div class="col-12 col-lg-8 ml-auto mr-auto mb-4">
-            <div class="multisteps-form__progress">
-              <button class="multisteps-form__progress-btn js-active" type="button" title="Información del Cliente">Información</button>
-              <button class="multisteps-form__progress-btn" type="button" title="Selecciona tu Solución">Soluciónes</button>
-              <button class="multisteps-form__progress-btn" type="button" title="Selecciona Capacidades a Adquirir">Capacidades</button>
-              <button class="multisteps-form__progress-btn" type="button" title="Indicanos tu Volumetria estimada">Volumetria</button>
+  <div id="principal">
+    <header class="header">
+      <h1 class="header__title">¿Que productos desea simular?</h1>
+    </header>
+    <div class="content">
+      <div class="container overflow-hidden">
+        <div class="multisteps-form">
+          <div class="row">
+            <div class="col-12 col-lg-8 ml-auto mr-auto mb-4">
+              <div class="multisteps-form__progress">
+                <button class="multisteps-form__progress-btn js-active" type="button"
+                  title="Información del Cliente">Información</button>
+                <button class="multisteps-form__progress-btn" type="button"
+                  title="Selecciona tu Solución">Soluciónes</button>
+                <button class="multisteps-form__progress-btn" type="button"
+                  title="Selecciona Capacidades a Adquirir">Capacidades</button>
+                <button class="multisteps-form__progress-btn" type="button"
+                  title="Indicanos tu Volumetria estimada">Volumetria</button>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="row">
+          <div class="row">
 
-          <div class="col-12 col-lg-12 m-auto">
-            <form class="multisteps-form__form">
+            <div class="col-12 col-lg-12 m-auto">
+              <form class="multisteps-form__form" id="frm_simulacion">
 
-              <!-- inicio primer paso -->
+                <!-- inicio primer paso -->
 
-              <div class="multisteps-form__panel shadow p-4 rounded bg-white js-active" data-animation="scaleIn">
-                <h3 class="multisteps-form__title">Información del Cliente</h3>
-                <div class="multisteps-form__content">
-                  <div class="form-row mt-4">
-                    <div class="col-12 col-sm-6">
-                      <input class="multisteps-form__input form-control" type="text" placeholder="Nombre Contacto"/>
-                    </div>
-                    <div class="col-12 col-sm-6 mt-4 mt-sm-0">
-                      <input class="multisteps-form__input form-control" type="text" placeholder="Nombre Empresa"/>
-                    </div>
-                  </div>
-                  <div class="form-row mt-4">
-                    <div class="col-12 col-sm-6">
-                      <input class="multisteps-form__input form-control" type="text" placeholder="Rut Empresa"/>
-                    </div>
-                    <div class="col-12 col-sm-6 mt-4 mt-sm-0">
-                      <input class="multisteps-form__input form-control" type="email" placeholder="Email Contacto"/>
-                    </div>
-                  </div>
-                  <div class="form-row mt-4">
-                    <div class="col-12 col-sm-6">
-                      <input class="multisteps-form__input form-control" type="text" placeholder="Teléfono Contacto"/>
-                    </div>
-                    <div class="col-12 col-sm-6 mt-4 mt-sm-0">
-                      <select class="multisteps-form__select form-control">
-                        <option selected="selected">País</option>
-                        <option>Chile</option>
-                        <option>Perú</option>
-                        <option>Colombia</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="button-row d-flex mt-4">
-                    <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Siguiente</button>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Termino primer paso -->
-
-              <!-- Inicio segundo paso -->
-
-              <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
-                <h3 class="multisteps-form__title" style="text-align: center;">Configura Tu Solución</h3>
-                <div class="multisteps-form__content">
-
-                  <div class="form-row mt-4">
-                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-                        <input class="fmultisteps-form__input" type="checkbox" id="btn_tecnologicos" data-toggle="toggle" data-onstyle="warning" data-on="+" data-off="-">
-
-                        <label class="form-check-label" for="flexCheckDefault"><strong>Recursos Tecnológicos</strong></label>
-                    </div>
-                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-                      <input class="multisteps-form__input" type="checkbox" value="" id="btn_ejecucion" data-toggle="toggle" data-onstyle="warning" data-on="+" data-off="-">
-                        <label class="form-check-label" for="flexCheckDefault"><strong>Recursos de Ejecución</strong></label>
-                    </div>
-                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-                      <input class="multisteps-form__input" type="checkbox" value="" id="btn_estrategicos" data-toggle="toggle" data-onstyle="warning" data-on="+" data-off="-">
-                        <label class="form-check-label" for="flexCheckDefault"><strong>Recursos de Estratégicos</strong></label>
-                    </div>
-                  </div>
-
-                <div class="form-row mt-4">
-
-                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-                      <div id="div_s-marca">
-                        <input class="fmultisteps-form__input" type="checkbox" id="btn_marca" data-toggle="toggle" data-onstyle="success" data-on="+" data-off="-">
-                        <label class="form-check-label" for="flexCheckDefault" id="lb_diseno_marca">Diseño de Marca</label><i class="fa fa-question-circle" id="help_diseno_marca"></i>
-                    </div>
-                  </div>
-
-                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-                      <div id="div_s-call">
-                        <input class="multisteps-form__input" type="checkbox" value="" id="btn_call" data-toggle="toggle" data-onstyle="success" data-on="+" data-off="-">
-                        <label class="form-check-label" for="flexCheckDefault" id="lb_call">Click To Call</label><i class="fa fa-question-circle" id="help_call"></i>
-                    </div>
-                  </div>
-
-                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-                      <div id="div_s-ejecutivos">
-                        <input class="multisteps-form__input" type="checkbox" value="" id="btn_ejecutivos" data-toggle="toggle" data-onstyle="success" data-on="+" data-off="-">
-                        <label class="form-check-label" for="flexCheckDefault" id="lb_ejecutivos">Ejecutivos</label><i class="fa fa-question-circle" id="help_ejecutivos"></i>
-                    </div>
-                  </div>
-
-                </div>
-
-                <div class="form-row mt-4">
-
-                  <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-                      <div id="div_s-marketing">
-                        <input class="fmultisteps-form__input" type="checkbox" id="btn_marketing" data-toggle="toggle" data-onstyle="success" data-on="+" data-off="-">
-                      <label class="form-check-label" for="flexCheckDefault" id="lb_marketing">Marketing Digital</label><i class="fa fa-question-circle" id="help_marketing"></i>
-                    </div>
-                  </div>
-
-                  <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-                      <div id="div_s-whatsapp">
-                          <input class="multisteps-form__input" type="checkbox" value="" id="btn_whatsapp" data-toggle="toggle" data-onstyle="success" data-on="+" data-off="-">
-                        <label class="form-check-label" for="flexCheckDefault" id="lb_whatsapp">Whatsapp</label><i class="fa fa-question-circle" id="help_whatsapp"></i>
-                    </div>
-                  </div>
-
-                  <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-                    <div id="div_s-office">                 
-                        <input class="multisteps-form__input" type="checkbox" value="" id="btn_office" data-toggle="toggle" data-onstyle="success" data-on="+" data-off="-">
-                        <label class="form-check-label" for="flexCheckDefault" id="lb_office">Back Office</label><i class="fa fa-question-circle" id="help_office"></i>
-                    </div>
-                  </div>
-
-                </div>
-
-                  
-
-                <div class="form-row mt-4">
-
-                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-
-                    </div>
-
-                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-                      <div id="div_s-rrss">
-                        <input class="multisteps-form__input" type="checkbox" value="" id="btn_rrss" data-toggle="toggle" data-onstyle="success" data-on="+" data-off="-">
-                        <label class="form-check-label" for="flexCheckDefault" id="lb_rrss">RRSS</label><i class="fa fa-question-circle" id="help_rrss"></i>
-                      </div> 
-                    </div>
-
-                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-                      <div id="div_s-consultoria">
-                        <input class="multisteps-form__input" type="checkbox" value="" id="btn_consultoria" data-toggle="toggle" data-onstyle="success" data-on="+" data-off="-">
-                        <label class="form-check-label" for="flexCheckDefault" id="lb_consultoria">Consultoria</label><i class="fa fa-question-circle" id="help_consultoria"></i>
+                <div class="multisteps-form__panel shadow p-4 rounded bg-white js-active" data-animation="scaleIn">
+                  <h3 class="multisteps-form__title">Información del Cliente</h3>
+                  <div class="multisteps-form__content">
+                    <div class="form-row mt-4">
+                      <div class="col-12 col-sm-6">
+                        <input class="multisteps-form__input form-control" name="nombre" type="text" placeholder="Nombre Contacto" />
                       </div>
-                  </div>
-
-                </div>
-
-                <div class="form-row mt-4">
-
-                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-                    </div>
-
-                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-                      <div id="div_s-ecommerce">
-                        <input class="multisteps-form__input" type="checkbox" value="" id="btn_ecommerce" data-toggle="toggle" data-onstyle="success" data-on="+" data-off="-">
-                        <label class="form-check-label" for="flexCheckDefault" id="lb_ecommerce">E-Commerce</label><i class="fa fa-question-circle" id="help_ecommerce"></i>
+                      <div class="col-12 col-sm-6 mt-4 mt-sm-0">
+                        <input class="multisteps-form__input form-control" name="nombre_empresa" type="text" placeholder="Nombre Empresa" />
                       </div>
                     </div>
-
-                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-                      <div id="div_s-sac">
-                        <input class="multisteps-form__input" type="checkbox" value="" id="btn_sac" data-toggle="toggle" data-onstyle="success" data-on="+" data-off="-">
-                        <label class="form-check-label" for="flexCheckDefault" id="lb_sac">SAC</label><i class="fa fa-question-circle" id="help_sac"></i>
+                    <div class="form-row mt-4">
+                      <div class="col-12 col-sm-6">
+                        <input class="multisteps-form__input form-control" name="rut_empresa" type="text" placeholder="Rut Empresa" />
                       </div>
-                  </div>
-
-                </div>
-
-                  <div class="button-row d-flex mt-4">
-                    <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Anterior</button>
-                    <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next" id="btn_sig-capacidades">Siguiente</button>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Termino segundo paso -->
-
-              <!-- Inicio tercer paso -->
-
-              <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
-                <h3 class="multisteps-form__title" style="text-align: center;">Capacidades Adquiridas</h3>
-                <div class="multisteps-form__content">
-
-                  <div class="form-row mt-4" id="div_titulo-capacidades">
-                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-                        <label class="form-check-label"><strong>Recursos Tecnológicos</strong></label>
-                    </div>
-                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-                        <label class="form-check-label"><strong>Recursos de Ejecución</strong></label>
-                    </div>
-                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-                        <label class="form-check-label"><strong>Recursos de Estratégicos</strong></label>
-                    </div>
-                  </div>
-
-                  <div class="form-row mt-4" id="div_aviso1">
-                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-                    </div>
-                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-                    </div>
-                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-                    </div>
-                 </div>
-
-                 <div class="form-row mt-4" id="div_aviso2">
-                  <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-                  </div>
-                  <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-                    <label class="form-check-label" for="flexCheckDefault" style="background-color: red; color: white; text-align: center; border: wheat; border-radius: 5px;">NO HA SELECCIONADO UNA SOLUCIÓN</label>
-
-                  </div>
-                  <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-                  </div>
-               </div>
-
-                  <div class="form-row mt-4">
-
-                  <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-                    <div id="div_c-rrss">
-                      <i class="fa fa-check fa-2x" style="color: greenyellow;"></i>
-                      <label class="form-check-label" for="flexCheckDefault" id="lb_grrss">Gestión de RRSS</label><i class="fa fa-question-circle" id="help_grrss"></i>
-                    </div>
-                  </div>
-
-                  <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-                      <div id="div_c-ivr">
-                      <i class="fa fa-check fa-2x" style="color: greenyellow;"></i>
-                        <label class="form-check-label" for="flexCheckDefault" id="lb_ivr">IVR</label><i class="fa fa-question-circle" id="help_ivr"></i>
-                      </div> 
-                  </div>
-
-                  <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-                      <div id="div_c-bpo">
-                      <i class="fa fa-check fa-2x" style="color: greenyellow;"></i>
-                        <label class="form-check-label" for="flexCheckDefault" id="lb_bpo">BPO</label><i class="fa fa-question-circle" id="help_bpo"></i>
-                      </div>
-                  </div>
-
-                  </div>
-
-                  <div class="form-row mt-4">
-
-                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-                      <div id="div_c-digital">
-                        <i class="fa fa-check fa-2x" style="color: greenyellow;"></i>
-                        <label class="form-check-label" for="flexCheckDefault" id="lb_digital">Marketing Digital</label><i class="fa fa-question-circle" id="help_digital"></i>
+                      <div class="col-12 col-sm-6 mt-4 mt-sm-0">
+                        <input class="multisteps-form__input form-control" name="email" type="email" placeholder="Email Contacto" />
                       </div>
                     </div>
-
-                  <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-                      <div id="div_c-voximplant">
-                      <i class="fa fa-check fa-2x" style="color: greenyellow;"></i>
-                        <label class="form-check-label" for="flexCheckDefault" id="lb_vox">Voximplant</label><i class="fa fa-question-circle" id="help_vox"></i>
-                      </div> 
-                  </div>
-
-                  <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-                      <div id="div_c-center">
-                      <i class="fa fa-check fa-2x" style="color: greenyellow;"></i>
-                        <label class="form-check-label" for="flexCheckDefault" id="lb_center">Contact Center</label><i class="fa fa-question-circle" id="help_center"></i>
+                    <div class="form-row mt-4">
+                      <div class="col-12 col-sm-6">
+                        <input class="multisteps-form__input form-control" name="telefono" type="text" placeholder="Teléfono Contacto" />
                       </div>
-                  </div>
-
-                  </div>
-
-                  <div class="form-row mt-4">
-
-                  <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-                      
-                  </div>
-
-                  <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-                      <div id="div_c-ecommerce">
-                      <i class="fa fa-check fa-2x" style="color: greenyellow;"></i>
-                        <label class="form-check-label" for="flexCheckDefault" id="lb_gecommerce">E-commerce</label><i class="fa fa-question-circle" id="help_gecommerce"></i>
-                    </div> 
-                  </div>
-
-                  <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-                      <div id="div_c-customer">
-                      <i class="fa fa-check fa-2x" style="color: greenyellow;"></i>
-                        <label class="form-check-label" for="flexCheckDefault" id="lb_gcustomer">Customer Experience</label><i class="fa fa-question-circle" id="help_gcustomer"></i>
+                      <div class="col-12 col-sm-6 mt-4 mt-sm-0">
+                        <select class="multisteps-form__select form-control" name="pais">
+                          <option selected="selected">País</option>
+                          <option>Chile</option>
+                          <option>Perú</option>
+                          <option>Colombia</option>
+                        </select>
                       </div>
-                  </div>
-
-                  </div>
-
-                  <div class="form-row mt-4">
-
-                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-                      
                     </div>
-
-                  <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-                      <div id="div_c-crm">
-                      <i class="fa fa-check fa-2x" style="color: greenyellow;"></i>
-                        <label class="form-check-label" for="flexCheckDefault" id="lb_gcrm">CRM</label><i class="fa fa-question-circle" id="help_gcrm"></i>
-                      </div>
-                  </div>
-
-                  <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-                      <div id="div_c-consultoria">
-                      <i class="fa fa-check fa-2x" style="color: greenyellow;"></i>
-                        <label class="form-check-label" for="flexCheckDefault" id="lb_gconsultoria">Cunsultoria</label><i class="fa fa-question-circle" id="help_gconsultoria"></i>
-                      </div>
-                  </div>
-
-                  </div>
-
-
-
-                  <div class="row">
-                    <div class="button-row d-flex mt-4 col-12">
-                      <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Anterior</button>
+                    <div class="button-row d-flex mt-4">
                       <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Siguiente</button>
                     </div>
                   </div>
                 </div>
-              </div>
 
-              <!-- Fin tercer paso -->
+                <!-- Termino primer paso -->
 
-              <!-- Inicio cuarto paso -->
+                <!-- Inicio segundo paso -->
 
-              <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
-                <h3 class="multisteps-form__title">Volumetria Estimada</h3>
-                <div class="multisteps-form__content">
+                <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
+                  <h3 class="multisteps-form__title" style="text-align: center;">Configura Tu Solución</h3>
+                  <div class="multisteps-form__content">
 
-                  <div class="form-row mt-4">
+                    <div class="form-row mt-4">
+                      <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                        <input class="fmultisteps-form__input" type="checkbox" id="btn_tecnologicos"
+                          data-toggle="toggle" data-onstyle="warning" data-on="+" data-off="-" name="rec_tecnologicos">
 
-                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-                      <input class="multisteps-form__input form-control" type="number" placeholder="Ventas Mes"/>
+                        <label class="form-check-label" for="flexCheckDefault"><strong>Recursos
+                            Tecnológicos</strong></label>
+                      </div>
+                      <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                        <input class="multisteps-form__input" type="checkbox" id="btn_ejecucion"
+                          data-toggle="toggle" data-onstyle="warning" data-on="+" data-off="-" name="rec_ejecucion">
+                        <label class="form-check-label" for="flexCheckDefault"><strong>Recursos de
+                            Ejecución</strong></label>
+                      </div>
+                      <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                        <input class="multisteps-form__input" type="checkbox" id="btn_estrategicos"
+                          data-toggle="toggle" data-onstyle="warning" data-on="+" data-off="-" name="rec_estrategicos">
+                        <label class="form-check-label" for="flexCheckDefault"><strong>Recursos de
+                            Estratégicos</strong></label>
+                      </div>
                     </div>
 
-                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-                      <input class="multisteps-form__input form-control" type="number" placeholder="Interacciones Mes"/>
+                    <div class="form-row mt-4">
+
+                      <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                        <div id="div_s-marca">
+                          <input class="fmultisteps-form__input" type="checkbox" id="btn_marca" data-toggle="toggle"
+                            data-onstyle="success" data-on="+" data-off="-" name="diseno_marca">
+                          <label class="form-check-label" for="flexCheckDefault" id="lb_diseno_marca">Diseño de
+                            Marca</label><i class="fa fa-question-circle" id="help_diseno_marca"></i>
+                        </div>
+                      </div>
+
+                      <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                        <div id="div_s-call">
+                          <input class="multisteps-form__input" type="checkbox" id="btn_call"
+                            data-toggle="toggle" data-onstyle="success" data-on="+" data-off="-" name="click_to_call">
+                          <label class="form-check-label" for="flexCheckDefault" id="lb_call">Click To Call</label><i
+                            class="fa fa-question-circle" id="help_call"></i>
+                        </div>
+                      </div>
+
+                      <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                        <div id="div_s-ejecutivos">
+                          <input class="multisteps-form__input" type="checkbox" id="btn_ejecutivos"
+                            data-toggle="toggle" data-onstyle="success" data-on="+" data-off="-" name="ejecutivos">
+                          <label class="form-check-label" for="flexCheckDefault" id="lb_ejecutivos">Ejecutivos</label><i
+                            class="fa fa-question-circle" id="help_ejecutivos"></i>
+                        </div>
+                      </div>
+
                     </div>
 
-                    <div class="col-12 col-sm-4 mt-4 mt-sm-0">
-                      <input class="multisteps-form__input form-control" type="number" placeholder="Clientes Potenciales Mes"/>
- 
+                    <div class="form-row mt-4">
+
+                      <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                        <div id="div_s-marketing">
+                          <input class="fmultisteps-form__input" type="checkbox" id="btn_marketing" data-toggle="toggle"
+                            data-onstyle="success" data-on="+" data-off="-" name="marketing_digital">
+                          <label class="form-check-label" for="flexCheckDefault" id="lb_marketing">Marketing
+                            Digital</label><i class="fa fa-question-circle" id="help_marketing"></i>
+                        </div>
+                      </div>
+
+                      <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                        <div id="div_s-whatsapp">
+                          <input class="multisteps-form__input" type="checkbox" id="btn_whatsapp"
+                            data-toggle="toggle" data-onstyle="success" data-on="+" data-off="-" name="whatsapp">
+                          <label class="form-check-label" for="flexCheckDefault" id="lb_whatsapp">Whatsapp</label><i
+                            class="fa fa-question-circle" id="help_whatsapp"></i>
+                        </div>
+                      </div>
+
+                      <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                        <div id="div_s-office">
+                          <input class="multisteps-form__input" type="checkbox" id="btn_office"
+                            data-toggle="toggle" data-onstyle="success" data-on="+" data-off="-" name="back_office">
+                          <label class="form-check-label" for="flexCheckDefault" id="lb_office">Back Office</label><i
+                            class="fa fa-question-circle" id="help_office"></i>
+                        </div>
+                      </div>
+
                     </div>
-                    
-                  </div>
-                  
-                  <div class="button-row d-flex mt-4">
-                    <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Anterior</button>
-                    <button class="btn btn-success ml-auto" type="button" title="Enviar Cotización" id="btn_enviar">Enviar Simulación</button>
+
+
+
+                    <div class="form-row mt-4">
+
+                      <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+
+                      </div>
+
+                      <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                        <div id="div_s-rrss">
+                          <input class="multisteps-form__input" type="checkbox" id="btn_rrss"
+                            data-toggle="toggle" data-onstyle="success" data-on="+" data-off="-" name="rrss">
+                          <label class="form-check-label" for="flexCheckDefault" id="lb_rrss">RRSS</label><i
+                            class="fa fa-question-circle" id="help_rrss"></i>
+                        </div>
+                      </div>
+
+                      <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                        <div id="div_s-consultoria">
+                          <input class="multisteps-form__input" type="checkbox" id="btn_consultoria"
+                            data-toggle="toggle" data-onstyle="success" data-on="+" data-off="-" name="consultoria">
+                          <label class="form-check-label" for="flexCheckDefault"
+                            id="lb_consultoria">Consultoria</label><i class="fa fa-question-circle"
+                            id="help_consultoria"></i>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <div class="form-row mt-4">
+
+                      <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                      </div>
+
+                      <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                        <div id="div_s-ecommerce">
+                          <input class="multisteps-form__input" type="checkbox" id="btn_ecommerce"
+                            data-toggle="toggle" data-onstyle="success" data-on="+" data-off="-" name="ecommerce">
+                          <label class="form-check-label" for="flexCheckDefault" id="lb_ecommerce">E-Commerce</label><i
+                            class="fa fa-question-circle" id="help_ecommerce"></i>
+                        </div>
+                      </div>
+
+                      <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                        <div id="div_s-sac">
+                          <input class="multisteps-form__input" type="checkbox" id="btn_sac"
+                            data-toggle="toggle" data-onstyle="success" data-on="+" data-off="-" name="sac">
+                          <label class="form-check-label" for="flexCheckDefault" id="lb_sac">SAC</label><i
+                            class="fa fa-question-circle" id="help_sac"></i>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <div class="button-row d-flex mt-4">
+                      <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Anterior</button>
+                      <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next"
+                        id="btn_sig-capacidades">Siguiente</button>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <!-- Fin cuarto paso -->
+                <!-- Termino segundo paso -->
 
-            </form>
+                <!-- Inicio tercer paso -->
+
+                <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
+                  <h3 class="multisteps-form__title" style="text-align: center;">Capacidades Adquiridas</h3>
+                  <div class="multisteps-form__content">
+
+                    <div class="form-row mt-4" id="div_titulo-capacidades">
+                      <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                        <label class="form-check-label"><strong>Recursos Tecnológicos</strong></label>
+                      </div>
+                      <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                        <label class="form-check-label"><strong>Recursos de Ejecución</strong></label>
+                      </div>
+                      <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                        <label class="form-check-label"><strong>Recursos de Estratégicos</strong></label>
+                      </div>
+                    </div>
+
+                    <div class="form-row mt-4" id="div_aviso1">
+                      <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                      </div>
+                      <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                      </div>
+                      <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                      </div>
+                    </div>
+
+                    <div class="form-row mt-4" id="div_aviso2">
+                      <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                      </div>
+                      <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                        <label class="form-check-label" for="flexCheckDefault"
+                          style="background-color: red; color: white; text-align: center; border: wheat; border-radius: 5px;">NO
+                          HA SELECCIONADO UNA SOLUCIÓN</label>
+
+                      </div>
+                      <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                      </div>
+                    </div>
+
+                    <div class="form-row mt-4">
+
+                      <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                        <div id="div_c-rrss">
+                          <i class="fa fa-check fa-2x" style="color: greenyellow;"></i>
+                          <label class="form-check-label" for="flexCheckDefault" id="lb_grrss">Gestión de RRSS</label><i
+                            class="fa fa-question-circle" id="help_grrss"></i>
+                        </div>
+                      </div>
+
+                      <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                        <div id="div_c-ivr">
+                          <i class="fa fa-check fa-2x" style="color: greenyellow;"></i>
+                          <label class="form-check-label" for="flexCheckDefault" id="lb_ivr">IVR</label><i
+                            class="fa fa-question-circle" id="help_ivr"></i>
+                        </div>
+                      </div>
+
+                      <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                        <div id="div_c-bpo">
+                          <i class="fa fa-check fa-2x" style="color: greenyellow;"></i>
+                          <label class="form-check-label" for="flexCheckDefault" id="lb_bpo">BPO</label><i
+                            class="fa fa-question-circle" id="help_bpo"></i>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <div class="form-row mt-4">
+
+                      <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                        <div id="div_c-digital">
+                          <i class="fa fa-check fa-2x" style="color: greenyellow;"></i>
+                          <label class="form-check-label" for="flexCheckDefault" id="lb_digital">Marketing
+                            Digital</label><i class="fa fa-question-circle" id="help_digital"></i>
+                        </div>
+                      </div>
+
+                      <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                        <div id="div_c-voximplant">
+                          <i class="fa fa-check fa-2x" style="color: greenyellow;"></i>
+                          <label class="form-check-label" for="flexCheckDefault" id="lb_vox">Voximplant</label><i
+                            class="fa fa-question-circle" id="help_vox"></i>
+                        </div>
+                      </div>
+
+                      <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                        <div id="div_c-center">
+                          <i class="fa fa-check fa-2x" style="color: greenyellow;"></i>
+                          <label class="form-check-label" for="flexCheckDefault" id="lb_center">Contact Center</label><i
+                            class="fa fa-question-circle" id="help_center"></i>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <div class="form-row mt-4">
+
+                      <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+
+                      </div>
+
+                      <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                        <div id="div_c-ecommerce">
+                          <i class="fa fa-check fa-2x" style="color: greenyellow;"></i>
+                          <label class="form-check-label" for="flexCheckDefault" id="lb_gecommerce">E-commerce</label><i
+                            class="fa fa-question-circle" id="help_gecommerce"></i>
+                        </div>
+                      </div>
+
+                      <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                        <div id="div_c-customer">
+                          <i class="fa fa-check fa-2x" style="color: greenyellow;"></i>
+                          <label class="form-check-label" for="flexCheckDefault" id="lb_gcustomer">Customer
+                            Experience</label><i class="fa fa-question-circle" id="help_gcustomer"></i>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <div class="form-row mt-4">
+
+                      <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+
+                      </div>
+
+                      <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                        <div id="div_c-crm">
+                          <i class="fa fa-check fa-2x" style="color: greenyellow;"></i>
+                          <label class="form-check-label" for="flexCheckDefault" id="lb_gcrm">CRM</label><i
+                            class="fa fa-question-circle" id="help_gcrm"></i>
+                        </div>
+                      </div>
+
+                      <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                        <div id="div_c-consultoria">
+                          <i class="fa fa-check fa-2x" style="color: greenyellow;"></i>
+                          <label class="form-check-label" for="flexCheckDefault"
+                            id="lb_gconsultoria">Cunsultoria</label><i class="fa fa-question-circle"
+                            id="help_gconsultoria"></i>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <div class="row">
+                      <div class="button-row d-flex mt-4 col-12">
+                        <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Anterior</button>
+                        <button class="btn btn-primary ml-auto js-btn-next" type="button"
+                          title="Next" id="btn_sig_volumetria">Siguiente</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Fin tercer paso -->
+
+                <!-- Inicio cuarto paso -->
+
+                <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
+                  <h3 class="multisteps-form__title">Volumetria Estimada</h3>
+                  <div class="multisteps-form__content">
+
+                    <div class="form-row mt-4">
+
+                      <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                        <input class="multisteps-form__input form-control" type="number" placeholder="Ventas Mes" name="ventas_mes"/>
+                      </div>
+
+                      <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                        <input class="multisteps-form__input form-control" type="number" placeholder="Interacciones Mes" name="interacciones_mes"/>
+                      </div>
+
+                      <div class="col-12 col-sm-4 mt-4 mt-sm-0">
+                        <input class="multisteps-form__input form-control" type="number" placeholder="Clientes Potenciales Mes" name="potenciales_mes"/>
+                      </div>
+
+                    </div>
+
+                    <div class="button-row d-flex mt-4">
+                      <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Anterior</button>
+                      <button class="btn btn-success ml-auto" type="button" title="Enviar Cotización" id="btn_enviar">Enviar Simulación</button>
+                    </div>
+
+                  </div>
+                </div>
+
+                <!-- Fin cuarto paso -->
+
+              </form>
+            </div>
+
+
           </div>
 
 
         </div>
-
-        
       </div>
     </div>
   </div>
-</div>
 
-<script  src="js/main.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
 
 </body>
+
 </html>

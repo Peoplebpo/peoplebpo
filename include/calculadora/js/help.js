@@ -3,6 +3,8 @@ $(document).ready(function () {
 
 // inicio esconde div de solucion y capacidades
 
+            $('#despedida').hide();
+
             $('#div_s-marca').hide();
             $('#div_s-call').hide();
             $('#div_s-ejecutivos').hide();
@@ -570,7 +572,7 @@ $(document).ready(function () {
 
 // inicio validacion aceptacion de condiciones y envio de correo electronico
 
-                $("#btn_enviar").click(function () {
+        $("#btn_enviar").click(function () {
 
         // inicio validar campos
         var nombre_contacto     = $('#nombre').val();
@@ -595,7 +597,7 @@ $(document).ready(function () {
         $('#interacciones_mes').val() == '') {
 
         Swal.fire({
-        position: 'top',
+        position: 'center',
         icon: 'error',
         title: 'ERROR',
         text: 'Complete todos los campos',
@@ -606,7 +608,7 @@ $(document).ready(function () {
         }else if ($('#email').val().indexOf('@', 0) == -1 || $('#email').val().indexOf('.', 0) == -1) {
             
         Swal.fire({
-        position: 'top',
+        position: 'center',
         icon: 'error',
         title: 'ERROR',
         text: 'Correo ingresado no es valido',
@@ -627,9 +629,7 @@ $(document).ready(function () {
                         denyButtonText: `Rechazar`,
                     }).then((result) => {
                         if (result.isConfirmed) {
-                            Swal.fire('Simulación Enviada', '', 'success'),
-                                $('#btn_enviar').attr("disabled", true),
-                                $('#principal').show();
+                            $('#despedida').show();
                                 
 // Inicio Enviar datos seleccionados a php para que envie simulacion por correo electronico
 

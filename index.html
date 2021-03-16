@@ -10,67 +10,11 @@
 
   <title>People BPO - Community Experience Experts</title>
   
-  <script>
-
-    var ZingayaConfig = {"buttonLabel":"Llamar a un Ejecutivo","labelColor":"#ffffff","labelFontSize":15,"labelTextDecoration":"none","labelFontWeight":"bold","labelShadowDirection":"bottom","labelShadowColor":"#ad1f09","labelShadow":1,"buttonBackgroundColor":"#d0280f","buttonGradientColor1":"#d0280f","buttonGradientColor2":"#d0280f","buttonGradientColor3":"#d0280f","buttonGradientColor4":"#d0280f","buttonShadow":"false","buttonHoverBackgroundColor":"#69ad26","buttonHoverGradientColor1":"#db341b","buttonHoverGradientColor2":"#db341b","buttonHoverGradientColor3":"#db341b","buttonHoverGradientColor4":"#db341b","buttonActiveShadowColor1":"#ffffff","buttonActiveShadowColor2":"#9e1705","buttonCornerRadius":8,"buttonPadding":13,"iconColor":"#fff","iconOpacity":1,"iconDropShadow":1,"iconShadowColor":"#13487f","iconShadowDirection":"bottom","iconShadowOpacity":0.5,"callme_id":"a4b2356b9c204356a6aea20608672ef0","poll_id":null,"analytics_id":null,"zid":"f52a641b81fdb4d7f62d3e0c740a973e","type":"widget","widgetPosition":"right","plain_html":false,"save":1};
-    (function(d, t) {
-        var g = d.createElement(t),s = d.getElementsByTagName(t)[0];g.src = '//d1bvayotk7lhk7.cloudfront.net/js/zingayabutton.js';g.async = 'true';
-            g.onload = g.onreadystatechange = function() {
-            if (this.readyState && this.readyState != 'complete' && this.readyState != 'loaded') return;
-            try {Zingaya.load(ZingayaConfig, 'zingayaa4b2356b9c204356a6aea20608672ef0'); if (!Zingaya.SVG()) {
-                    var p = d.createElement(t);p.src='//d1bvayotk7lhk7.cloudfront.net/PIE.js';p.async='true';s.parentNode.insertBefore(p, s);
-                    p.onload = p.onreadystatechange = function() {
-                            if (this.readyState && this.readyState != 'complete' && this.readyState != 'loaded') return;
-                            if (window.PIE) PIE.attach(document.getElementById("zingayaButton"+ZingayaConfig.callme_id));
-            }}} catch (e) {}};
-        s.parentNode.insertBefore(g, s);
-    }(document, 'script'));
-    
-    </script>
-
 
 <!-- slide clientes y colaboradores -->
 
   <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
   <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css">
-
-  <style type="text/css">
-    html, body {
-      margin: 0;
-      padding: 0;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    .slider {
-      width: 100%;
-
-    }
-
-    .slick-slide {
-      margin: 20px 20px;
-    }
-
-    .slick-slide img {
-      width: 100%;
-    }
-
-
-    .slick-slide {
-      transition: all ease-in-out .3s;
-      opacity: .2;
-    }
-
-    .slick-active {
-      opacity: .5;
-    }
-
-    .slick-current {
-      opacity: 1;
-    }
-  </style>
 
 <!-- fin slide clientes y colaboradores -->
 
@@ -92,6 +36,7 @@
   <link href="css/agency.css" rel="stylesheet">
 
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+  <script type="text/javascript" src="js/link.js"></script>
 
 </head>
 
@@ -119,14 +64,10 @@
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#team">Nuestro Equipo</a>
           </li>
-         <li class="dropdown nav-item">
+          <li class="dropdown nav-item">
             <a class="dropdown-toggle nav-link js-scroll-trigger" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Más</a>
 
             <ul class="dropdown-menu">
-
-                <li class="nav-item">
-                  <a class="nav-link js-scroll-trigger" href="#contact">Escríbanos.</a>
-                </li>
 
                 <li>
                   <a class="nav-link js-scroll-trigger" href="http://intranet.peoplebpo.cl" target="_blank">Intranet.</a>
@@ -166,7 +107,7 @@
         <div class="intro-heading text-uppercase" style="margin-top: 5px;">EFICIENCIA</div>
         <div class="intro-lead-in">SOPORTADA EN EL PODER DE LAS COMUNIDADES</div>
 
-        <a class="btn btn-primary btn-xl js-scroll-trigger" data-toggle="modal" data-target="#calculadora">Cotiza Con Nosotros</a>
+        <a class="btn btn-primary btn-xl js-scroll-trigger" data-toggle="modal" data-target="#calculadora" id="btn_calculadora">Cotiza Con Nosotros</a>
       </div>
         </div>
       </div>
@@ -188,7 +129,7 @@
       <div class="carousel-item" style="background-image: url('img/4.png');">
         <div class="carousel-caption d-none d-md-block">
 
-        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#services">Más Información</a>
+        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#contact">Más Información</a>
         <p class="lead">Sé parte de nuestro equipo, y sigamos transformando la industria Digital.</p>
 
         </div>
@@ -223,7 +164,7 @@
           <span class="fa-stack fa-4x">
           <!--  <i class="fas fa-circle fa-stack-2x text-primary"></i> -->
             <img src="img/logos/icon1.png">
-           <!-- <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i> -->
+          <!-- <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i> -->
           </span>
           <h4 class="service-heading">Information Security</h4>
           <p class="text-muted" style="text-align: justify;">La protección de datos y seguridad de la información de nuestros clientes son nuestra mayor responsabilidad. El cumplimiento de la legislación de protección de datos de cada país son una ventaja comparativa importante en nuestro negocio.</p>
@@ -861,7 +802,7 @@
             <p></a></p>
         </li>
         <li>
-           <a href="https://twitter.com/peoplebpo" target="_blank"> <img src="img/redes/twitter.png" width="64" height="64">
+            <a href="https://twitter.com/peoplebpo" target="_blank"> <img src="img/redes/twitter.png" width="64" height="64">
             <p></a></p>
         </li>
 
@@ -934,12 +875,9 @@
   <div class="modal fade" id="calculadora" role="dialog">
       <div class="modal-dialog">
           <div class="modal-content">
-             <!-- <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" id="cerrar">&times;</button>
-              </div>-->
               <div class="modal-body">
-
-                  <iframe src="include/calculadora/index.html" style="border: none; width: 100%; height: 635px;"></iframe>
+                <button type="button" class="close" data-dismiss="modal" id="cerrar">&times;</button>
+                  <iframe style="border: none; width: 100%; height: 635px;" id="ifr_calculadora"></iframe>
 
               </div>
           </div>
@@ -950,6 +888,11 @@
 
 <!-- fin modal calculadora -->
 
+<div class="click_to_call">
+  <a href="http://zingaya.com/widget/a4b2356b9c204356a6aea20608672ef0" target="_blank">
+  <img src="img/llamanos.png" style="width: 200px; height: 70px;">
+  </a>
+  </div>
 
 </body>
 

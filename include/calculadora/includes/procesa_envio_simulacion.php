@@ -6,11 +6,16 @@
     require("../../../vendor/phpmailer/class.phpmailer.php");
     require("../../../vendor/phpmailer/class.smtp.php");
 
+    date_default_timezone_set('America/Argentina/Buenos_Aires');
+
+    $hora = date("H:i:s");
+    $fecha = date("Y-m-d"); 
+
 // Primera ventana
 
     $nombre_solicitante = (isset($_POST['nombre'])) ? $_POST['nombre'] : '';
     $nombre_empresa     = (isset($_POST['nombre_empresa'])) ? $_POST['nombre_empresa'] : '';
-    $rut                = (isset($_POST['rut'])) ? $_POST['rut'] : '';
+    $rut                = (isset($_POST['rut_empresa'])) ? $_POST['rut_empresa'] : '';
     $email_solicitante  = (isset($_POST['email'])) ? $_POST['email'] : '';
     $telefono           = (isset($_POST['telefono'])) ? $_POST['telefono'] : '';
     $pais               = (isset($_POST['pais'])) ? $_POST['pais'] : '';
@@ -37,6 +42,23 @@
     $ventas_mes         = (isset($_POST['ventas_mes'])) ? $_POST['ventas_mes'] : '';
     $interacciones_mes  = (isset($_POST['interacciones_mes'])) ? $_POST['interacciones_mes'] : '';
     $potenciales_mes    = (isset($_POST['potenciales_mes'])) ? $_POST['potenciales_mes'] : '';
+
+// ingresar datos en base calculadora tabla solicitudes
+
+    require '../conexion/conexion.php';
+
+    $sSQL= "INSERT INTO solicitudes Set
+    nombre_solicitante='$nombre_solicitante',
+    nombre_empresa='$nombre_empresa',
+    rut='$rut',
+    email='$email_solicitante',
+    telefono='$telefono',
+    pais='$pais',
+    fecha='$fecha',
+    hora='$hora'";
+
+    mysqli_query($conn, $sSQL); 
+
 
 // Inicio enviar correo de simulacion
 

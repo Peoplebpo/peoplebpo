@@ -66,7 +66,7 @@
 
     $destinatario 	= $email_solicitante;
 
-    $nombre 		= "😁 Peoplebpo Simulador de Servicios a Contratar";
+    $nombre 		= "Peoplebpo";
 
     $email 			= "noreply@peoplebpo.com";
 
@@ -100,7 +100,7 @@
 
     $mail->AddAddress($destinatario);
 
-    $mail->Subject 	= "Simulación Solicitada";
+    $mail->Subject 	= "🤖 Simulación costos de Servicios a contratar";
 
     $mensajeHtml 	= nl2br($mensaje);
 
@@ -112,7 +112,7 @@
 
 
 
-    <h1>SOLICITUD DE SIMULACIÓN</h1>
+    <h1>SIMULACIÓN DE SERVICIOS A CONTRATAR</h1>
 
 
     <p><h3>Don:</h3> {$nombre_solicitante}</p>

@@ -661,7 +661,7 @@ section#contact .form-group input.form-control {
 }
 
 section#contact .form-group textarea.form-control {
-  height: 248px;
+  height: 336px;
 }
 
 section#contact .form-control:focus {
@@ -870,3 +870,5 @@ ul.social-buttons li a:hover {
     .slick-current {
       opacity: 1;
     }
+
+    

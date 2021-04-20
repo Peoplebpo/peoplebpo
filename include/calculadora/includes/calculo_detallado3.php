@@ -239,8 +239,8 @@ echo '
 </tr>
 </tbody>
 </table>
-</br>
-</br>
+<br>
+<br>
 <table style="width: 100%;" >
 <tbody>
 <tr>
@@ -252,7 +252,7 @@ echo '
 </tr>
 </tbody>
 </table>
-</br>
+<br>
 <table style="width: 100%; border-collapse: collapse;" border="1">
 <tr>
     <td style="width: 100%; font-weight: bold; text-align: center; background-color: #D3D3D3;">VOLUMETRIA</td>
@@ -546,7 +546,7 @@ if ($rec_estrategicos == 'on' & ($ejecutivos == 'on' | $back_office == 'on' | $c
     $suma_demanda = $suma_periodicidad_demanda_tecnologicos + $suma_periodicidad_demanda_ejecucion + $suma_periodicidad_demanda_estrategicos;
     $suma_unico = $suma_periodicidad_unico_tecnologicos + $suma_periodicidad_unico_ejecucion + $suma_periodicidad_unico_estrategicos;
 
-    echo'</br>
+    echo'<br>
     <table style="width: 100%; border-collapse: collapse;" border="1"" border="1">
     <tbody>
     <tr>
@@ -576,7 +576,7 @@ if ($rec_estrategicos == 'on' & ($ejecutivos == 'on' | $back_office == 'on' | $c
 
     $total = number_format($total_mas_iva,'0',',','.');
 
-    echo'</br>
+    echo'<br>
     <table style="width: 100%; border-collapse: collapse;" border="1"" border="1">
     <tbody>
     <tr>

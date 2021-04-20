@@ -1,7 +1,10 @@
 $(document).ready(function () {
 
+    // Cambia el zoom del navegador
 
-    // inicio esconde div de solucion y capacidades
+    document.body.style.zoom = "90%";
+
+    // Inicio esconde div de solucion y capacidades
 
     $('#despedida').hide();
 
@@ -266,7 +269,7 @@ $(document).ready(function () {
 
         }
 
-        if (($('#btn_ejecucion').is(':checked')) && ($('#btn_whatsapp').is(':checked'))) {
+        if (($('#btn_ejecucion').is(':checked')) && ($('#btn_whatsapp').is(':checked')) | ($('#btn_rrss').is(':checked'))) {
 
             // Hacer algo si el checkbox ha sido seleccionado 
 
@@ -280,19 +283,6 @@ $(document).ready(function () {
 
         }
 
-        if (($('#btn_ejecucion').is(':checked')) && ($('#btn_rrss').is(':checked'))) {
-
-            // Hacer algo si el checkbox ha sido seleccionado 
-
-            $('#div_c-ecommerce').show();
-
-        } else {
-
-            // Hacer algo si el checkbox ha sido seleccionado 
-
-            $('#div_c-ecommerce').hide();
-
-        }
 
         if (($('#btn_ejecucion').is(':checked')) && ($('#btn_ecommerce').is(':checked'))) {
 
@@ -365,28 +355,20 @@ $(document).ready(function () {
         }
     });
 
-
     // inicio cuadro mensajes descripcion de ayuda 
 
     $("#email").one("click",(function () {
-
-        Swal.fire({
-            icon: 'info',
-            title: 'Recuerde',
-            text: 'Debe ingresar un correo valido para poder enviar la simulación solicitada.',
-            footer: ''
-        })
+        alertify.set({ delay: 8000 });
+        alertify.success("<h5><label style='color: #FFD700;'>Recuerde!</label></h5> Ingresar un correo valido para que pueda ser enviada la simulación sin problemas.");
+        
         })
     );
 
-    $("#ventas_mes").one("click",(function () {
+    $("#ventas_mes, #interacciones_mes,#potenciales_mes").one("click",(function () {
 
-        Swal.fire({
-            icon: 'info',
-            title: 'Recuerde',
-            text: 'Para que la simulación se ajuste a sus necesidades recuerda ingresar volumetria valida.',
-            footer: ''
-        })
+        alertify.set({ delay: 8000 });
+        alertify.success("<h5><label style='color: #FFD700;'>Recuerde!</label></h5> Para que la simulación se ajuste a sus necesidades recuerda ingresar volumetria valida.");
+        
         })
     );
 
@@ -600,6 +582,7 @@ $(document).ready(function () {
         var ventas_mes = $('#ventas_mes').val();
         var interacciones_mes = $('#interacciones_mes').val();
         var potenciales_mes = $('#potenciales_mes').val();
+        var correo = $('#email').val();
 
         if (
             $('#nombre').val() == '' ||
@@ -649,6 +632,7 @@ $(document).ready(function () {
                 title: 'Condiciones Manejo de Datos',
                 text: `Peoplebpo utilizara su información exclusivamente para enviar simulación de costos de servicio a través de Email. Recuerde que para enviar la simulación, debe Aceptar este aviso pulsando el botón de "Aceptar", o rechazar el uso de la información entregada pulsando "Rechazar".`,
                 width: 800,
+                allowOutsideClick:false,
                 showDenyButton: true,
                 confirmButtonText: `Acepto`,
                 denyButtonText: `Rechazar`,
@@ -684,7 +668,16 @@ $(document).ready(function () {
                         /* Read more about handling dismissals below */
                         if (result.dismiss === Swal.DismissReason.timer) {
                             $('#despedida').show();
-                            console.log('I was closed by the timer')
+                            Swal.fire({
+                                position: 'center',
+                                icon: 'success',
+                                title: 'Simulación Creada',
+                                showConfirmButton:false,
+                                allowOutsideClick:false,
+                                text: 'Enviado al correo: '+ correo,
+                            })
+
+                            return false;
                         }
                     })
 
@@ -694,13 +687,6 @@ $(document).ready(function () {
                         type: "POST",
                         url: "includes/procesa_envio_simulacion.php",
                         data: datos,
-
-                        success: function (respuesta) {
-
-                            console.log(respuesta);
-                            return false;
-
-                        }
 
                     });
 

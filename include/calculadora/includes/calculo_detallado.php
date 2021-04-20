@@ -1,8 +1,5 @@
 <?php
 
-    error_reporting(E_ALL);
-    ini_set('display_errors', '1');
-
     $pais               = "Chile";
 
 
@@ -53,16 +50,6 @@
 
             $result_diseno                   = mysqli_query($conn, $query_diseno);
 
-            // suma total valores capacidades
-
-            $query_diseno_suma               = "SELECT SUM(qxcosto) AS total_qxcosto FROM qxcosto_chile WHERE solucion = '$fun_nom_capacidad'";
-
-            $result_diseno_suma              = mysqli_query($conn, $query_diseno_suma);
-
-            $resultado_diseno_suma           = mysqli_fetch_array($result_diseno_suma);
-
-            $qxcosto_diseno_suma             = $resultado_diseno_suma['total_qxcosto'];
-        
 
             // muestra capacidades con sus valores individuales
 
@@ -79,6 +66,12 @@
             <td style="width: 250px; background-color: #fdc100; font-weight: bold;">PRODUCTO</td>
             <td style="width: 100px; background-color: #fdc100; font-weight: bold;">COSTO</td>
             </tr>';
+
+            global $valor_total_diseno_suma;
+
+            $valor_total_diseno_suma = 5;
+
+            $valor_total = 0;
 
             while ($row_diseno = mysqli_fetch_array($result_diseno)) {
 
@@ -104,28 +97,10 @@
                     $calculo_capacidad_diseno   = $qxcosto_diseno;
                 }
 
-                $valor_total_diseno              = round($calculo_capacidad_diseno);
+                $valor_total_diseno             = round($calculo_capacidad_diseno);
 
-                //valor total de la capacidad
-
-                if ($volumetria_capacidad == 'SI' & $fun_volumetria == 'SI'){
                 
-                    $calculo_capacidad_diseno_suma   = ($qxcosto_diseno_suma) * (($fun_ventas_mes / 30) + ($fun_interacciones_mes / 700) + ($fun_potenciales_mes / 400));
-                    
-                }else if ($volumetria_capacidad == 'SI' & $fun_volumetria == 'NO'){
-                    
-                    $calculo_capacidad_diseno_suma   = $qxcosto_diseno_suma;
-                    
-                }else if ($volumetria_capacidad == 'NO' & $fun_volumetria == 'SI'){
-                    
-                    $calculo_capacidad_diseno_suma   = $qxcosto_diseno_suma;
-                
-                }else if ($volumetria_capacidad == 'NO' & $fun_volumetria == 'NO'){
-                    
-                    $calculo_capacidad_diseno_suma   = $qxcosto_diseno_suma;
-                }
-    
-                    $valor_total_diseno_suma         = round($calculo_capacidad_diseno_suma);
+                $valor_total += $valor_total_diseno;
 
                 echo '
                 <tr>
@@ -138,16 +113,11 @@
                         
             }
 
-                echo '
+            echo '
                 <tr>
-                <td style="width: 200px;"></td>
-                <td style="width: 250px;"></td>
-                <td style="width: 150px;"></td>
-                <td style="width: 250px;  font-weight: bold; background-color: #a1d7ed;">COSTO TOTAL CAPACIDAD</td>
-                <td style="width: 100px; text-align: right; font-weight: bold; background-color: #CCCCCC;">$ '.$valor_total_diseno_suma.'</td>
-                </tr>
-                </tbody></table>';
-        
+                <td style="width: 200px;">TOTAL</td>
+                <td style="width: 100px; text-align: right;">$ '.$valor_total.'</td>
+                </tr>';
 
         }
 
@@ -171,28 +141,62 @@
     if ($diseno_marca == 'on' | $marketing_digital == 'on'){
 
         titulo_capacidad('RECURSOS TECNOLOGICOS');
+
         tabla_capacidades($pais, 'Diseño Marca', $diseno_marca, $ventas_mes, $interacciones_mes, $potenciales_mes, $volumetria);
+        
+        $total_marca = $valor_total_diseno_suma;
+        
         tabla_capacidades($pais, 'Marketing Digital', $marketing_digital, $ventas_mes, $interacciones_mes, $potenciales_mes, $volumetria);
+    
+        $total_marketing = $valor_total_diseno_suma;
     }
 
+ 
     if ($click_to_call == 'on' | $whatsapp == 'on' | $rrss == 'on' | $ecommerce == 'on'){
     
         echo '</br>';
         titulo_capacidad('RECURSOS EJECUCIÓN');
+
         tabla_capacidades($pais, 'Click to Call', $click_to_call, $ventas_mes, $interacciones_mes, $potenciales_mes, $volumetria);
+        
+        $total_call = $valor_total_diseno_suma;
+        
         tabla_capacidades($pais, 'Whatsapp', $whatsapp, $ventas_mes, $interacciones_mes, $potenciales_mes, $volumetria);
+        
+        $total_whatsapp = $valor_total_diseno_suma;
+        
         tabla_capacidades($pais, 'RRSS', $rrss, $ventas_mes, $interacciones_mes, $potenciales_mes, $volumetria);
+        
+        $total_rss = $valor_total_diseno_suma;
+        
         tabla_capacidades($pais, 'E-Commerce', $ecommerce, $ventas_mes, $interacciones_mes, $potenciales_mes, $volumetria);
+    
+        $total_commerce = $valor_total_diseno_suma;
     }
+
+ 
 
     if ($ejecutivos == 'on' | $back_office == 'on' | $consultoria == 'on' | $sac == 'on'){
         
         echo '</br>';
         titulo_capacidad('RECURSOS ESTRATEGICOS');
+        
         tabla_capacidades($pais, 'Ejecutivos', $ejecutivos, $ventas_mes, $interacciones_mes, $potenciales_mes, $volumetria);
+        
+        $total_ejecutivos = $valor_total_diseno_suma;
+        
         tabla_capacidades($pais, 'Back Office', $back_office, $ventas_mes, $interacciones_mes, $potenciales_mes, $volumetria);
+        
+        $total_office = $valor_total_diseno_suma;
+        
         tabla_capacidades($pais, 'Consultoria', $consultoria, $ventas_mes, $interacciones_mes, $potenciales_mes, $volumetria);
+        
+        $total_consultoria = $valor_total_diseno_suma;
+        
         tabla_capacidades($pais, 'SAC', $sac, $ventas_mes, $interacciones_mes, $potenciales_mes, $volumetria);
+    
+        $total_sac = $valor_total_diseno_suma;
+    
     }
 
 ?>

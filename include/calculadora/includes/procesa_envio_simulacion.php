@@ -656,7 +656,7 @@
     mysqli_query($conn, $sSQL); 
 
 // ENVIO CORREO ELECTRONICO CON ARCHIVO SIMULACION ADJUNTA 
-/*
+
     $mensaje 		= "Mensaje Simulación Solicitada";
     $destinatario 	= $email_solicitante;
     $nombre 		= "Peoplebpo";
@@ -702,5 +702,5 @@
     );
 
     $estadoEnvio = $mail->Send();
-*/
+
 ?>

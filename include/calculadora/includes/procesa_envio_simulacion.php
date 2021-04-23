@@ -676,7 +676,7 @@
     $mail->From 	= $email;
     $mail->FromName = $nombre;
     $mail->AddAddress($destinatario);
-    $mail->Subject 	= "🤖 Simulación costos de Servicios a contratar";
+    $mail->Subject 	= "🤖 Simulación Costos de Servicios";
     $mensajeHtml 	= nl2br($mensaje);
     $archivo = 'simulacion.pdf';
     $mail->AddAttachment($archivo,$archivo);
@@ -686,7 +686,7 @@
     <body> 
     <h1>SIMULACIÓN DE SERVICIOS A CONTRATAR</h1>
     <p><h3>Don:</h3> {$nombre_solicitante}</p>
-    <p><a href='https://b24-nuujfg.bitrix24.site/crm_form4/'><img src='https://adnprogen.com.ar/wp-content/uploads/2015/04/botones-web-quiero-que-me-llamen.png'></img></a></p>
+    <p><a href='https://b24-nuujfg.bitrix24.site/volver_llamar/'><img src='https://adnprogen.com.ar/wp-content/uploads/2015/04/botones-web-quiero-que-me-llamen.png'></img></a></p>
     </body> 
     </html>
     <br />"; // Texto del email en formato HTML

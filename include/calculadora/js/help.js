@@ -364,10 +364,10 @@ $(document).ready(function () {
         })
     );
 
-    $("#ventas_mes, #interacciones_mes,#potenciales_mes").one("click",(function () {
+    $("#ventas_mes").one("click",(function () {
 
         alertify.set({ delay: 8000 });
-        alertify.success("<h5><label style='color: #FFD700;'>Recuerde!</label></h5> Para que la simulación se ajuste a sus necesidades recuerda ingresar volumetria valida.");
+        alertify.success("<h5><label style='color: #FFD700;'>Recuerde!</label></h5> Para que la simulación se ajuste a sus necesidades ingrese una volumetria valida.");
         
         })
     );
@@ -674,7 +674,7 @@ $(document).ready(function () {
                                 title: 'Simulación Creada',
                                 showConfirmButton:false,
                                 allowOutsideClick:false,
-                                text: 'Enviado al correo: '+ correo,
+                                text: 'Esta fue Enviada al correo: '+ correo,
                             })
 
                             return false;

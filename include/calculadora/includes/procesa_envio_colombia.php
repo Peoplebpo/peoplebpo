@@ -83,9 +83,9 @@
             <tbody>
             <tr>
             <td style="width: 250px;">'.$fun_nom_capacidad.'</td>';
-            
 
-            $query_diseno                    = "SELECT * FROM qxcosto_chile WHERE solucion = '$fun_nom_capacidad'";
+            $query_diseno = "SELECT * FROM qxcosto_peru WHERE solucion = '$fun_nom_capacidad'";
+            
             $result_diseno                   = mysqli_query($conn, $query_diseno);
             
             global $valor_total2;
@@ -126,7 +126,7 @@
 
     //MUESTRA EL CUADRO DE CALCULO DE PERIODICIDAD
 
-            $query_diseno2                   = "SELECT * FROM qxcosto_chile WHERE solucion = '$fun_nom_capacidad'";
+            $query_diseno2                   = "SELECT * FROM qxcosto_peru WHERE solucion = '$fun_nom_capacidad'";
             $result_diseno2                  = mysqli_query($conn, $query_diseno);
 
             global $valor_total_mensual;
@@ -686,6 +686,7 @@
     <body> 
     <h1>SIMULACIÓN DE SERVICIOS A CONTRATAR</h1>
     <p><h3>Don:</h3> {$nombre_solicitante}</p>
+    <p><h3>Don:</h3> {$pais}</p>
     <p><a href='https://b24-nuujfg.bitrix24.site/volver_llamar/'><img src='https://adnprogen.com.ar/wp-content/uploads/2015/04/botones-web-quiero-que-me-llamen.png'></img></a></p>
     </body> 
     </html>

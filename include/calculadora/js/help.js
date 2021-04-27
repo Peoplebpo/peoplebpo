@@ -648,6 +648,7 @@ $(document).ready(function () {
                         title: 'ESPERE POR FAVOR!',
                         html: 'Creando Simulación</br><b></b>',
                         timer: 5000,
+                        allowOutsideClick:false,
                         timerProgressBar: true,
                         didOpen: () => {
                             Swal.showLoading()
@@ -681,11 +682,16 @@ $(document).ready(function () {
                         }
                     })
 
-                    console.log(datos);
+                        var valor_pais  = $('#pais').val();
+                        var chile       = "includes/procesa_envio_chile.php";
+                        var peru        = "includes/procesa_envio_peru.php" ;
+                        var Colombia    = "includes/procesa_envio_colombia.php" ;
 
-                    $.ajax({
+                        direccion       = (valor_pais == 'Chile') ? chile : (valor_pais == 'Peru') ? peru : Colombia;
+
+                        $.ajax({
                         type: "POST",
-                        url: "includes/procesa_envio_simulacion.php",
+                        url: direccion,
                         data: datos,
 
                     });

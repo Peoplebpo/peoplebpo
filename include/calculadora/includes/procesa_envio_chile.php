@@ -328,7 +328,7 @@ echo '
                     <label class="titulo_capacidad">CAPACIDAD</label>   
                 </div>
 
-                <div class="divTableCell" style="width: 33%;  text-align: right;">
+                <div class="divTableCell" style="width: 33%; text-align: right;">
                     <label class="titulo_capacidad">COSTO</label>   
                 </div>
 

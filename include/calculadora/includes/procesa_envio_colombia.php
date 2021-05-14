@@ -324,7 +324,7 @@
                         <label class="titulo_capacidad">CAPACIDAD</label>   
                     </div>
     
-                    <div class="divTableCell" style="width: 33%;">
+                    <div class="divTableCell" style="width: 33%; text-align: right;">
                         <label class="titulo_capacidad">COSTO</label>   
                     </div>
     
@@ -365,7 +365,8 @@
                     <div class="divTableRow">
         
                         <div class="divTableCell" style="width: 68%;">
-                            <label class="texto_nombre_capacidad">'.$fun_nom_capacidad.'</label>   
+                            <label class="texto_nombre_capacidad">'.$fun_nom_capacidad.'</label>
+                            <div style="float: right;"><label class="valor_nombre_capacidad" style="text-align: right;">$</label></div>   
                         </div>';
     
                 $query_diseno = "SELECT * FROM qxcosto_chile WHERE solucion = '$fun_nom_capacidad'";
@@ -508,8 +509,8 @@
             }
     
             echo '
-            <div class="divTableCell" style="width: 33%;">
-                <label class="valor_nombre_capacidad">$ '.number_format($valor_total2,'0',',','.').'</label>   
+            <div class="divTableCell" style="width: 33%; text-align: right;">
+                <label class="valor_nombre_capacidad">'.number_format($valor_total2,'0',',','.').'</label>   
             </div>
     
         </div>
@@ -796,11 +797,12 @@
             <div class="divTableRow">
         
                         <div class="divTableCell" style="width: 75%;">
-                            <label class="valor_nombre_periodicidad">TOTAL MENSUAL</label>   
+                            <label class="valor_nombre_periodicidad">TOTAL MENSUAL</label>
+                            <div style="float: right;"><label class="valor_nombre_capacidad" style="text-align: right;">$</label></div>   
                         </div>
         
-                        <div class="divTableCell" style="width: 25%;">
-                            <label class="titulo_texto_totales">$ '.number_format($suma_mensual,'0',',','.').'</label>   
+                        <div class="divTableCell" style="width: 25%; text-align: right;">
+                            <label class="titulo_texto_totales">'.number_format($suma_mensual,'0',',','.').'</label>   
                         </div>
                         
             </div>
@@ -808,11 +810,12 @@
             <div class="divTableRow">
         
                 <div class="divTableCell" style="width: 75%;">
-                    <label class="valor_nombre_periodicidad">TOTAL BAJO DEMANDA</label>   
+                    <label class="valor_nombre_periodicidad">TOTAL BAJO DEMANDA</label>
+                    <div style="float: right;"><label class="valor_nombre_capacidad" style="text-align: right;">$</label></div>   
                 </div>
         
-                <div class="divTableCell" style="width: 25%;">
-                    <label class="titulo_texto_totales">$ '.number_format($suma_demanda,'0',',','.').'</label>   
+                <div class="divTableCell" style="width: 25%; text-align: right;">
+                    <label class="titulo_texto_totales">'.number_format($suma_demanda,'0',',','.').'</label>   
                 </div>
                 
             </div>
@@ -820,11 +823,12 @@
             <div class="divTableRow">
         
                 <div class="divTableCell" style="width: 75%;">
-                    <label class="valor_nombre_periodicidad">TOTAL UNICO</label>   
+                    <label class="valor_nombre_periodicidad">TOTAL UNICO</label>
+                    <div style="float: right;"><label class="valor_nombre_capacidad" style="text-align: right;">$</label></div>   
                 </div>
         
-                <div class="divTableCell" style="width: 25%;">
-                    <label class="titulo_texto_totales">$ '.number_format($suma_unico,'0',',','.').'</label>   
+                <div class="divTableCell" style="width: 25%; text-align: right;">
+                    <label class="titulo_texto_totales">'.number_format($suma_unico,'0',',','.').'</label>   
                 </div>
                 
             </div>
@@ -850,11 +854,12 @@
             <div class="divTableRow">
         
                         <div class="divTableCell" style="width: 75%; text-align: right; vertical-align: bottom; padding-right: 0.5rem;">
-                            <label class="texto_nombre_capacidad">TOTAL NETO :</label>   
+                            <label class="texto_nombre_capacidad">TOTAL NETO :</label>
+                            <div style="float: right;"><label class="valor_total_totales" style="text-align: right;">$</label></div>  
                         </div>
         
-                        <div class="divTableCell" style="width: 25%; vertical-align: bottom;">
-                            <label class="valor_texto_totales">$ '.number_format($suma_total,'0',',','.').'</label>   
+                        <div class="divTableCell" style="width: 25%; vertical-align: bottom; text-align: right;">
+                            <label class="valor_texto_totales">'.number_format($suma_total,'0',',','.').'</label>   
                         </div>
                         
             </div>
@@ -862,11 +867,12 @@
             <div class="divTableRow">
         
                 <div class="divTableCell" style="width: 75%; text-align: right; vertical-align: bottom; padding-right: 0.5rem;">
-                    <label class="texto_nombre_capacidad">IVA :</label>   
+                    <label class="texto_nombre_capacidad">IVA :</label>
+                    <div style="float: right;"><label class="valor_total_totales" style="text-align: right;">$</label></div>  
                 </div>
         
-                <div class="divTableCell" style="width: 25%; vertical-align: bottom;">
-                    <label class="valor_texto_totales">$ '.$iva_format.'</label>   
+                <div class="divTableCell" style="width: 25%; vertical-align: bottom; text-align: right;">
+                    <label class="valor_texto_totales">'.$iva_format.'</label>   
                 </div>
                 
             </div>
@@ -874,11 +880,12 @@
             <div class="divTableRow">
         
                 <div class="divTableCell" style="width: 75%; text-align: right; vertical-align: bottom; padding-right: 0.5rem;">
-                    <label class="texto_nombre_capacidad">TOTAL NETO +IVA :</label>   
+                    <label class="texto_nombre_capacidad">TOTAL NETO +IVA :</label>
+                    <div style="float: right;"><label class="valor_total_totales" style="text-align: right;">$</label></div>  
                 </div>
         
-                <div class="divTableCell" style="width: 25%; vertical-align: bottom;">
-                    <label class="valor_total_totales">$ '.$total.'</label>   
+                <div class="divTableCell" style="width: 25%; vertical-align: bottom; text-align: right;">
+                    <label class="valor_total_totales">'.$total.'</label>   
                 </div>
                 
             </div>

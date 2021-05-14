@@ -855,7 +855,7 @@
         
                         <div class="divTableCell" style="width: 75%; text-align: right; vertical-align: bottom; padding-right: 0.5rem;">
                             <label class="texto_nombre_capacidad">TOTAL NETO :</label>
-                            <div style="float: right;"><label class="valor_total_totales" style="text-align: right;">$</label></div>  
+                            <div style="float: right;"><label class="valor_texto_totales" style="text-align: right;">$</label></div>  
                         </div>
         
                         <div class="divTableCell" style="width: 25%; vertical-align: bottom; text-align: right;">
@@ -868,7 +868,7 @@
         
                 <div class="divTableCell" style="width: 75%; text-align: right; vertical-align: bottom; padding-right: 0.5rem;">
                     <label class="texto_nombre_capacidad">IVA :</label>
-                    <div style="float: right;"><label class="valor_total_totales" style="text-align: right;">$</label></div>  
+                    <div style="float: right;"><label class="valor_texto_totales" style="text-align: right;">$</label></div>  
                 </div>
         
                 <div class="divTableCell" style="width: 25%; vertical-align: bottom; text-align: right;">

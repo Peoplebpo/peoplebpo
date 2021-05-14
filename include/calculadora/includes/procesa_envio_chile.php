@@ -2,6 +2,205 @@
     ob_start(); 
 ?>
 
+<!-- Inicio estilos -->
+<head>
+    <style type="text/css">
+        html {
+        margin: 0;
+        }
+
+        @font-face {
+            font-family: 'Geometria';
+            src: url('lib/dompdf/fonts/Geometria.ttf') format(truetype); 
+        }
+
+        @font-face {
+            font-family: 'Geometria-ExtraBold';
+            src: url('lib/dompdf/fonts/Geometria-ExtraBold.ttf') format(truetype); 
+        }
+
+        @font-face {
+            font-family: 'Geometria-Heavy';
+            src: url('lib/dompdf/fonts/Geometria-Heavy.ttf') format(truetype);
+        }
+
+        @font-face {
+            font-family: 'Geometria-Light';
+            src: url('url(lib/dompdf/fonts/Geometria-Light.ttf') format(truetype);
+        }
+
+        @font-face {
+            font-family: 'Geometria-LightItalic';
+            src: url('lib/dompdf/fonts/Geometria-LightItalic.ttf') format(truetype);
+        }
+
+        .titulo{
+            font-family: 'Geometria-ExtraBold', sans-serif;
+            font-size: 3rem;
+            color: #312945;
+            font-weight: 900;
+            margin-left: 5rem;
+        }
+
+        .linea{
+            background-color: #C9D115;
+            height: 7px;
+            margin-top: 0.2rem;
+        }
+
+        .nombre_persona{
+            font-family: 'Geometria-Heavy', sans-serif;
+            font-size: 1.5rem;
+            color: #312945;
+            font-weight: bold;
+            margin-left: 5rem;
+        }
+
+        .texto_persona{
+            font-family: '/Geometria-Light', Arial, Helvetica, sans-serif;
+            font-size: 1rem;
+            color: #312945;
+            font-weight: normal;
+            margin-left: 5rem;
+            margin-right: 5rem;
+        }
+
+        .linea_volumetria{
+            background-color: #312945;
+            height: 7px;
+            margin-left: 5rem;
+            margin-right: 5rem;
+            margin-top: 0.8rem;
+        }
+
+        .texto_titulo_volumetria{
+            font-family: 'Geometria-ExtraBold', sans-serif;
+            font-size: 0.8rem;
+            color: #312945;
+            font-weight: 600;
+            font-style: oblique;
+
+        }
+
+        .valor_volumetria{
+            font-family: 'Geometria-ExtraBold', sans-serif;
+            font-size: 1rem;
+            color: #312945;
+            font-weight: 800;
+            font-style: bold;
+
+        }
+
+        /* DivTable.com */
+        .divTable{
+            display: table;
+            width: 100%;
+            
+        }
+        .divTableRow {
+            display: table-row;
+        }
+        .divTableHeading {
+            display: table-header-group;
+        }
+        .divTableCell, .divTableHead {
+            border: 0px;
+            display: table-cell;
+        }
+        .divTableHeading {
+            display: table-header-group;
+            font-weight: bold;
+        }
+        .divTableFoot {
+            display: table-footer-group;
+            font-weight: bold;
+        }
+        .divTableBody {
+            display: table-row-group;
+        }
+
+        .titulo_capacidad{
+            font-family: 'Geometria-ExtraBold', sans-serif;
+            font-size: 1.2rem;
+            color: #C9D115;
+            font-weight: 700;
+            font-style: oblique;
+        }
+
+        .texto_titulo_capacidad{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1rem;
+            color: #312945;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .texto_nombre_capacidad{
+            font-family: 'Geometria-ExtraBold', sans-serif;
+            font-size: 1rem;
+            color: #312945;
+            font-weight: 700;
+            font-style: bold;
+            margin-left: 30px;
+
+        }
+
+        .valor_nombre_capacidad{
+            font-family: 'Geometria-ExtraBold', sans-serif;
+            font-size: 1rem;
+            color: #312945;
+            font-weight: 800;
+            font-style: bold;
+
+        }
+
+        .valor_nombre_periodicidad{
+            font-family: 'Geometria-ExtraBold', sans-serif;
+            font-size: 1rem;
+            color: #312945;
+            font-weight: 800;
+            font-style: bold;
+
+        }
+
+        .titulo_texto_totales{
+            font-family: 'Geometria', sans-serif;
+            font-size: 1rem;
+            color: #312945;
+            font-weight: 800;
+            text-align: right;
+        }
+
+        .valor_texto_totales{
+            font-family: 'Geometria', sans-serif;
+            font-size: 1.5rem;
+            color: #999999;
+            font-weight: 800;
+            text-align: left;
+
+        }
+
+        .valor_total_totales{
+            font-family: 'Geometria', sans-serif;
+            font-size: 1.5rem;
+            color: #312945;
+            font-weight: 800;
+            text-align: left;
+
+        }
+
+        footer {
+            position: fixed; 
+            bottom: 0cm; 
+            left: 0cm; 
+            right: 0cm;
+            height: 2cm;
+        }
+    </style>
+</head>
+
+<!-- fin estilos -->
+
 <?php
 
     error_reporting(E_ALL);
@@ -70,6 +269,93 @@
 
     }
 
+    
+
+echo '
+<div style="width: 100%;">
+    <img src="../images/header.png" style="width: 100%; margin-bottom: 1rem; ">
+</div>
+
+<div>
+    <label class="titulo">SIMULADOR</label>
+</div>
+
+<div class="linea"></div>
+
+<div style="margin-top: 0.8rem;">
+    <label class="nombre_persona">Sr. '.$nombre_solicitante.'</label>
+</div>
+
+<div>
+    <label><p class="texto_persona">*Gracias por confiar en nosotros. En respuesta a su solicitud, es de nuestro agrado adjuntar la siguiente simulación mensual de contratacion de servicios de acuerdo al detalle indicado</p></label>
+</div>
+
+<div>
+    <label class="nombre_persona">VOLUMETRÍA</label>
+</div>
+
+<!-- inicio volumetria -->
+<div style="margin-left: 5rem; margin-right: 5rem; margin-top: 1rem;">
+<div class="divTable" style="width: 100%;" >
+    <div class="divTableBody">
+    <div class="divTableRow">
+    <div class="divTableCell" style="width: 25%;"><center><img src="../images/cartera.png"></center></div>
+    <div class="divTableCell" style="width: 40%;"><center><img src="../images/mano.png"></center></div>
+    <div class="divTableCell" style="width: 35%;"><center><img src="../images/personas.png"></center></div>
+    </div>
+    <div class="divTableRow">
+    <div class="divTableCell"><label class="texto_titulo_volumetria"><center>VENTAS</center></label></div>
+    <div class="divTableCell"><label class="texto_titulo_volumetria"><center>CLIENTES POTENCIALES</center></label></div>
+    <div class="divTableCell"><label class="texto_titulo_volumetria"><center>INTERACCIONES</center></label></div>
+    </div>
+    <div class="divTableRow">
+    <div class="divTableCell"><center><label class="valor_volumetria">'.$ventas_mes.'</label></center></div>
+    <div class="divTableCell"><center><label class="valor_volumetria">'.$potenciales_mes.'</label></center></div>
+    <div class="divTableCell"><center><label class="valor_volumetria">'.$interacciones_mes.'</label></center></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+<div class="linea_volumetria"></div>
+
+<div style="margin-left: 5rem; margin-right: 5rem; margin-top: 1.2rem;">
+    <div class="divTable" style="width: 100%; " >
+        <div class="divTableBody">
+            <div class="divTableRow">
+
+                <div class="divTableCell" style="width: 68%;">
+                    <label class="titulo_capacidad">CAPACIDAD</label>   
+                </div>
+
+                <div class="divTableCell" style="width: 33%;  text-align: right;">
+                    <label class="titulo_capacidad">COSTO</label>   
+                </div>
+
+            </div>
+        </div> 
+        
+    ';
+
+    function titulo_capacidad($fun_titulo){ 
+
+        echo '
+        <div class="divTableBody" >
+            <div class="divTableRow">
+
+                <div class="divTableCell" style="width: 100%; padding-bottom: 0.5rem; padding-top: 0.5rem;">
+                    <label class="texto_titulo_capacidad">'.$fun_titulo.'</label>   
+                </div>
+
+            </div>
+        </div>
+        
+        
+        
+        
+';
+    }
+
     // FUNCION CALCULO VALOR CAPACIDADES Y SUMA TOTAL
 
     function tabla_capacidades($fun_nom_recurso, $fun_nom_capacidad, $fun_capacidad, $fun_ventas_mes, $fun_interacciones_mes, $fun_potenciales_mes, $fun_volumetria){
@@ -79,10 +365,13 @@
         if ($fun_capacidad == 'on' ){
 
             echo '
-            <table style="width: 100%; border-collapse: collapse;" border="1" >
-            <tbody>
-            <tr>
-            <td style="width: 250px;">'.$fun_nom_capacidad.'</td>';
+            <div class="divTableBody">
+                <div class="divTableRow">
+    
+                    <div class="divTableCell" style="width: 68%;">
+                        <label class="texto_nombre_capacidad">'.$fun_nom_capacidad.'</label>
+                        <div style="float: right;"><label class="valor_nombre_capacidad" style="text-align: right;">$</label></div>   
+                    </div>';
 
             $query_diseno = "SELECT * FROM qxcosto_chile WHERE solucion = '$fun_nom_capacidad'";
             
@@ -224,79 +513,18 @@
         }
 
         echo '
-        <td style="width: 100px; text-align: right; font-weight: bold;">$ '.number_format($valor_total2,'0',',','.').'</td>
-        </tr></tbody></table>';
+        <div class="divTableCell" style="width: 33%; text-align: right;">
+            <label class="valor_nombre_capacidad">'.number_format($valor_total2,'0',',','.').'</label>   
+        </div>
+
+    </div>
+</div>';
 
     }
 
-    function titulo_capacidad($fun_titulo){
+    // LLAMAR A FUNCION SEGUN SOLUCION 
 
-        echo '
-        <table style="width: 100%; border-collapse: collapse;" border="1">
-        <tbody>
-        <tr>
-        <td style="font-weight: bold; background-color:#93ce3b;">'.$fun_titulo.'</td>
-        </tr>
-        </tbody>
-        </table>
 
-        <table style="width: 100%; border-collapse: collapse;" border="1">
-        <tbody>
-        <tr>
-        <td style="width: 250px; background-color: #fdc100; font-weight: bold;">CAPACIDAD</td>
-        <td style="width: 100px; background-color: #fdc100; font-weight: bold;">COSTO</td>
-        </tr>
-        </tbody>
-        </table>    
-        ';
-
-    }
-
-    // LLAMAR A FUNCION SEGUN SOLUCION
-
-    echo '
-    <table style="width: 100%;" >
-    <tbody>
-    <tr>
-    <td><img src="../images/logo.png"></img></td>
-    <td>&nbsp;</td>
-    </tr>
-    </tbody>
-    </table>
-    <br>
-    <br>
-    <table style="width: 100%;" >
-    <tbody>
-    <tr>
-    <td style="width: 100%; font-weight: bold;">Sr/Sra. '.$nombre_solicitante.'</td>
-    </tr>
-    <tr>
-    <td style="width: 100%; border-collapse: collapse;" border="1">Gracias por confiar en nosotros. En respuesta a su solicitud, es de nuestro agrado adjuntar la siguiente
-    simulación mensual de contratación de servicios, de acuerdo al detalle indicado:</td>
-    </tr>
-    </tbody>
-    </table>
-    <br>
-    <table style="width: 100%; border-collapse: collapse;" border="1">
-    <tr>
-    <td style="width: 100%; font-weight: bold; text-align: center; background-color: #D3D3D3;">VOLUMETRIA</td>
-    </tr>
-    </tbody>
-    </table>
-    <table style="width: 100%; border-collapse: collapse;" border="1">
-    <tbody>
-    <tr>
-    <td style="width: 33%; font-weight: bold; text-align: center; background-color: #F4A460;">VENTAS</td>
-    <td style="width: 33%; font-weight: bold; text-align: center; background-color: #F4A460;">INTERACCIONES</td>
-    <td style="width: 33%; font-weight: bold; text-align: center; background-color: #F4A460;">CLIENTES POTENCIALES</td>
-    </tr>
-    <tr>
-    <td style="width: 33%; font-weight: bold; text-align: center;">'.$ventas_mes.'</td>
-    <td style="width: 33%; font-weight: bold; text-align: center;">'.$interacciones_mes.'</td>
-    <td style="width: 33%; font-weight: bold; text-align: center;">'.$potenciales_mes.'</td>
-    </tr>
-    </tbody>
-    </table><br>';
 
     require '../conexion/conexion.php';
 
@@ -304,7 +532,6 @@
 
     if ($rec_tecnologicos == 'on' & ($diseno_marca == 'on' | $marketing_digital == 'on')){
 
-    echo '</br>';
     titulo_capacidad('RECURSOS TECNOLOGICOS');
 
         if ($diseno_marca == 'on'){
@@ -358,7 +585,6 @@
 
     if ($rec_ejecucion == 'on' & ($click_to_call == 'on' | $whatsapp == 'on' | $rrss == 'on' | $ecommerce == 'on')){
 
-    echo '</br>';
     titulo_capacidad('RECURSOS EJECUCIÓN');
 
         if ($click_to_call == 'on'){
@@ -456,7 +682,6 @@
 
     if ($rec_estrategicos == 'on' & ($ejecutivos == 'on' | $back_office == 'on' | $consultoria == 'on' | $sac == 'on')){
 
-    echo '</br>';
     titulo_capacidad('RECURSOS ESTRATEGICOS');
 
     if ($ejecutivos == 'on'){
@@ -570,23 +795,49 @@
     $suma_demanda = $suma_periodicidad_demanda_tecnologicos + $suma_periodicidad_demanda_ejecucion + $suma_periodicidad_demanda_estrategicos;
     $suma_unico = $suma_periodicidad_unico_tecnologicos + $suma_periodicidad_unico_ejecucion + $suma_periodicidad_unico_estrategicos;
 
-    echo'<br>
-    <table style="width: 100%; border-collapse: collapse;" border="1"" border="1">
-    <tbody>
-    <tr>
-    <td style="width: 250px; background-color: #F5F5F5; font-weight: bold; text-align: left;">TOTAL PAGO UNICO</td>
-    <td style="width: 100px; background-color: #fdc100; font-weight: bold; text-align: right;">$ '.number_format($suma_unico,'0',',','.').'</td>
-    </tr>
-    <tr>
-    <td style="width: 250px; background-color: #F5F5F5; font-weight: bold; text-align: left;">TOTAL PAGO BAJO DEMANDA</td>
-    <td style="width: 100px; background-color: #fdc100; font-weight: bold; text-align: right;">$ '.number_format($suma_demanda,'0',',','.').'</td>
-    </tr>
-    <tr>
-    <td style="width: 250px; background-color: #F5F5F5; font-weight: bold; text-align: left;">TOTAL PAGO MENSUAL</td>
-    <td style="width: 100px; background-color: #fdc100; font-weight: bold; text-align: right;">$ '.number_format($suma_mensual,'0',',','.').'</td>
-    </tr>
-    </tbody>
-    </table>';
+    echo'</div>
+    <div class="divTable" style="width: 100%; margin-top: 0.8rem;" >
+
+        <div class="divTableRow">
+    
+                    <div class="divTableCell" style="width: 75%;">
+                        <label class="valor_nombre_periodicidad">TOTAL MENSUAL</label>
+                        <div style="float: right;"><label class="valor_nombre_capacidad" style="text-align: right;">$</label></div>   
+                    </div>
+    
+                    <div class="divTableCell" style="width: 25%; text-align: right;">
+                        <label class="titulo_texto_totales">'.number_format($suma_mensual,'0',',','.').'</label>   
+                    </div>
+                    
+        </div>
+    
+        <div class="divTableRow">
+    
+            <div class="divTableCell" style="width: 75%;">
+                <label class="valor_nombre_periodicidad">TOTAL BAJO DEMANDA</label>
+                <div style="float: right;"><label class="valor_nombre_capacidad" style="text-align: right;">$</label></div>  
+            </div>
+    
+            <div class="divTableCell" style="width: 25%; text-align: right;">
+                <label class="titulo_texto_totales">'.number_format($suma_demanda,'0',',','.').'</label>   
+            </div>
+            
+        </div>
+    
+        <div class="divTableRow">
+    
+            <div class="divTableCell" style="width: 75%;">
+                <label class="valor_nombre_periodicidad">TOTAL UNICO</label>
+                <div style="float: right;"><label class="valor_nombre_capacidad" style="text-align: right;">$</label></div>    
+            </div>
+    
+            <div class="divTableCell" style="width: 25%; text-align: right;">
+                <label class="titulo_texto_totales">'.number_format($suma_unico,'0',',','.').'</label>   
+            </div>
+            
+        </div>
+    
+    </div>';
 
     // MOSTRAR CUADRO DE SUMAS DE TODAS LAS CAPACIDADES MAS IVA
 
@@ -600,23 +851,67 @@
 
     $total = number_format($total_mas_iva,'0',',','.');
 
-    echo'<br>
-    <table style="width: 100%; border-collapse: collapse;" border="1"" border="1">
-    <tbody>
-    <tr>
-    <td style="width: 250px; background-color: #F5F5F5; font-weight: bold; text-align: right;">TOTAL NETO: $</td>
-    <td style="width: 100px; background-color: #fdc100; font-weight: bold; text-align: right;">'.number_format($suma_total,'0',',','.').'</td>
-    </tr>
-    <tr>
-    <td style="width: 250px; background-color: #F5F5F5; font-weight: bold; text-align: right;">IVA : $</td>
-    <td style="width: 100px; background-color: #fdc100; font-weight: bold; text-align: right;">'.$iva_format.'</td>
-    </tr>
-    <tr>
-    <td style="width: 250px; background-color: #F5F5F5; font-weight: bold; text-align: right;">TOTAL NETO + IVA : $</td>
-    <td style="width: 100px; background-color: #fdc100; font-weight: bold; text-align: right;">'.$total.'</td>
-    </tr>
-    </tbody>
-    </table>';
+    echo'
+    
+    <div class="divTable" style="width: 100%; margin-top: 0.8rem;" >
+
+        <div class="divTableRow">
+    
+                    <div class="divTableCell" style="width: 75%; text-align: right; vertical-align: bottom; padding-right: 0.5rem;">
+                        <label class="texto_nombre_capacidad">TOTAL NETO :</label>
+                        <div style="float: right;"><label class="valor_texto_totales" style="text-align: left;">$</label></div>    
+                    </div>
+    
+                    <div class="divTableCell" style="width: 25%; vertical-align: bottom; text-align: right;">
+                        <label class="valor_texto_totales">'.number_format($suma_total,'0',',','.').'</label>   
+                    </div>
+                    
+        </div>
+    
+        <div class="divTableRow">
+    
+            <div class="divTableCell" style="width: 75%; text-align: right; vertical-align: bottom; padding-right: 0.5rem;">
+                <label class="texto_nombre_capacidad">IVA :</label>
+                <div style="float: right;"><label class="valor_texto_totales" style="text-align: left;">$</label></div>     
+            </div>
+    
+            <div class="divTableCell" style="width: 25%; vertical-align: bottom; text-align: right;">
+                <label class="valor_texto_totales">'.$iva_format.'</label>   
+            </div>
+            
+        </div>
+    
+        <div class="divTableRow">
+    
+            <div class="divTableCell" style="width: 75%; text-align: right; vertical-align: bottom; padding-right: 0.5rem;">
+                <label class="texto_nombre_capacidad">TOTAL NETO +IVA :</label>
+                <div style="float: right;"><label class="valor_texto_totales" style="text-align: left;">$</label></div>      
+            </div>
+    
+            <div class="divTableCell" style="width: 25%; vertical-align: bottom; text-align: right;">
+                <label class="valor_total_totales">'.$total.'</label>   
+            </div>
+            
+        </div>
+    
+    </div>
+    
+    </div>
+    
+    
+    <footer>
+    
+        <div style="width: 100%;">
+            <img src="../images/footer.png" style="width: 100%; margin-bottom: 1.5rem; ">
+        </div>
+    </footer>
+    
+    
+    
+    
+    
+    
+    ';
 ?>
 
 
